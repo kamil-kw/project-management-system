@@ -1,108 +1,238 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![Hero image](images_readme/hero_image.PNG)
+# ✔️ Project Management System 📔
 
-Welcome Kamil Kwiatkowski,
+## [See Live web](TBA)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# Introduction
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Welcome to my Fourth Full Stack Course project. This is a Project Management System.
 
-## Gitpod Reminders
+The inspiration for this project was my site learning process of becoming a certified SCRUM master. As a SCRUM Master, one of the most needed items is to have an area to collect and monitor workload, progress, roadblocks.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+<a name="tableOfContents"></a>
 
-Another blue button should appear to click: _Open Browser_.
+# Table of Contents
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+[**1. UX**](#ux)
+* [**1.1. Strategy**](#strategy)
+    * [**1.1.1 Project Goals**](#projectGoals)
+    * [**1.1.2 User target**](#userTarget)
+        * [**1st time visitors**](#firstTime)
+        * [**Returning visitors**](#returning)
+    * [**1.1.3 User expectations**](#userExpectations)
 
-A blue button should appear to click: _Make Public_,
+* [**1.2. Structure**](#structure)
+* [**1.3. Skeleton**](#skeleton)
+* [**1.4. Color Scheme**](#colorScheme)
 
-Another blue button should appear to click: _Open Browser_.
+[**2. Features**](#features)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+[**3. Technologies Used**](#technologies)
 
-To log into the Heroku toolbelt CLI:
+[**4. Testing**](#testing)
+* [**4.1 PEP8**](#pep)
+* [**4.2 Manual Testing**](#manualTesting)
+* [**4.3 Function tests**](#functionTest)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+[**5. Development Cycle**](#development)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+[**6. Deployment**](#deployment)
 
-------
+[**7. End Product**](#endProduct)
 
-## Release History
+[**8. Known Bugs**](#knownBugs)
+* [**8.1 Fixed bugs**](#fixedBugs)
+* [**8.1 Remaining Bugs**](#remainBugs)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+[**9. Credits**](#credits)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+[Back to Table Of Content](#tableOfContents)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+<a name="ux"></a>
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+# **1. UX**
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+[Back to Table Of Content](#tableOfContents)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+<a name="strategy"></a>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+# **1.1 Strategy**
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+<a name="projectGoals"></a>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+##  **1.1.1 Project Goals**
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+<a name="userTarget"></a>
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## **1.1.2 User Target**
 
-------
+<a name="firstTime"></a>
 
-## FAQ about the uptime script
+### **First time visitors**
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
+<a name="returning"></a>
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### **Returning visitors**
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+[Back to Table Of Content](#tableOfContents)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+<a name="userExpectations"></a>
 
-**Can I opt out?**
+## **1.1.3 User Expectations**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+[Back to Table Of Content](#tableOfContents)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+<a name="structure"></a>
 
----
+# **1.2. Structure**
 
-Happy coding!
+
+
+<a name="skeleton"></a>
+
+# **1.3. Skeleton**
+
+diagram below:
+
+![flow](images_readme/flow_final.png)
+
+[Back to Table Of Content](#tableOfContents)
+
+<a name="colorScheme"></a>
+
+# **1.4. Color Scheme**
+
+
+[Back to Table Of Content](#tableOfContents)
+
+<a name="features"></a>
+
+# **2. Features**
+
+[Back to Table Of Content](#tableOfContents)
+
+<a name="technologies"></a>
+
+# **3. Technologies Used**
+
+During creation journey I did use:
+
+* [Chrome](https://www.google.com/intl/en_uk/chrome/)
+    * Chrome dev tool used to debug and test code while building
+* [Github](http://github.com)
+    * For storing project code written in gitpod
+* [W3School](https://www.w3schools.com/)
+    * For problem solving and code searching
+* [PEP8 validator](http://pep8online.com/)
+    * For checking python convention
+* [Heroku](https://id.heroku.com/login)
+    * To deploy project into live environment
+
+[Back to Table Of Content](#tableOfContents)
+
+<a name="testing"></a>
+
+# **4. Testing**
+
+<a name="pep"></a>
+
+## **4.1 PEP8**
+
+
+[Back to Table Of Content](#tableOfContents)
+
+<a name="manualTesting"></a>
+
+## **4.2 Manual testing**
+
+
+
+[Back to Table Of Content](#tableOfContents)
+
+<a name="functionTest"></a>
+
+## **4.3 Function tests**
+
+
+<a name="development"></a>
+
+# **5. Development Cycle**
+
+
+
+[Back to Table Of Content](#tableOfContents)
+
+<a name="deployment"></a>
+
+# **6. Deployment**
+
+To deploy my final project to the cloud I used Heroku. To do this I had to:
+
+1. Push the latest code to GitHub.
+2. Go to Heroku
+3. Select new in the top right corner.
+4. Create new app.
+5. Enter the app name and select Europe as the region.
+6. Connect to GitHub.
+7. Search for repo-name.
+8. Select connect to the relevant repo you want to deploy.
+9. Select the settings tab.
+10. Add buildpack
+11. Select Python, then save changes.
+12. Select Nodejs, then save changes.
+13. Make sure Heroku/Python is at the top of the list, followed by Heroku/Nodejs
+14. Navigate to the deploy tab
+15. Scroll down to Manual Deploy and select deploy branch.
+
+[Deployed version](TBA)
+
+[Back to Table Of Content](#tableOfContents)
+
+<a name="endProduct"></a>
+
+# **7. End Product**
+
+## **End Product screens**
+
+![Hero image]()
+
+[See testing photos](#functionTest) for more end product photo.
+
+[Back to Table Of Content](#tableOfContents)
+
+<a name="knownBugs"></a>
+
+# **8. Known bugs**
+
+<a name="fixedBugs"></a>
+
+## **8.1 Fixed bugs**
+
+
+<a name="remainBugs"></a>
+
+## **8.2 Remaining Bugs**
+
+
+[Back to Table Of Content](#tableOfContents)
+
+<a name="credits"></a>
+
+# **9. Credits**
+
+Heroku deployment instructions from Code Institute
+
+GitHub Python Template [Code Institute](https://codeinstitute.net/)
+
