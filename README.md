@@ -69,7 +69,7 @@ The inspiration for this project was my site learning process of becoming a cert
 
 ## **1.1.2 User Stories **
 
-
+![User Stories](images/readme_images/user_stories.png)
 
 # **1.2. Structure**
 
