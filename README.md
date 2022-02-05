@@ -18,10 +18,7 @@ The inspiration for this project was my site learning process of becoming a cert
 [**1. UX**](#ux)
 * [**1.1. Strategy**](#strategy)
     * [**1.1.1 Project Goals**](#projectGoals)
-    * [**1.1.2 User target**](#userTarget)
-        * [**1st time visitors**](#firstTime)
-        * [**Returning visitors**](#returning)
-    * [**1.1.3 User expectations**](#userExpectations)
+    * [**1.1.2 User Stories**](#userStories)
 
 * [**1.2. Structure**](#structure)
 * [**1.3. Skeleton**](#skeleton)
@@ -68,33 +65,11 @@ The inspiration for this project was my site learning process of becoming a cert
 
 
 
-<a name="userTarget"></a>
+<a name="userStories"></a>
 
-## **1.1.2 User **
-
-<a name="firstTime"></a>
-
-### **First time visitors**
+## **1.1.2 User Stories **
 
 
-
-<a name="returning"></a>
-
-### **Returning visitors**
-
-
-
-[Back to Table Of Content](#tableOfContents)
-
-<a name="userExpectations"></a>
-
-## **1.1.3 User Expectations**
-
-
-
-[Back to Table Of Content](#tableOfContents)
-
-<a name="structure"></a>
 
 # **1.2. Structure**
 
