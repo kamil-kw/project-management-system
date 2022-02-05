@@ -81,7 +81,7 @@ The inspiration for this project was my site learning process of becoming a cert
 
 diagram below:
 
-![flow](images_readme/flow_final.png)
+![flow](images/readme_images/importance_difficulty.png)
 
 [Back to Table Of Content](#tableOfContents)
 
