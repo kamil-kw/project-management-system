@@ -70,7 +70,7 @@ The inspiration for this project was my site learning process of becoming a cert
 
 <a name="userTarget"></a>
 
-## **1.1.2 User Target**
+## **1.1.2 User **
 
 <a name="firstTime"></a>
 
@@ -124,6 +124,10 @@ diagram below:
 [Back to Table Of Content](#tableOfContents)
 
 <a name="technologies"></a>
+
+Importance and Difficulty table:
+
+![Hero image](images/readme_images/importance_difficulty.png)
 
 # **3. Technologies Used**
 
