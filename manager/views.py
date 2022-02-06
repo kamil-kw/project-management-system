@@ -1,5 +1,6 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 
 # Create your views here.
-def say_hello(request):
-    return HttpResponse('<h1>Hello!</h1>')
+def get_manager_list(request):
+    return render(request, 'manager/manager_list.html')
+
