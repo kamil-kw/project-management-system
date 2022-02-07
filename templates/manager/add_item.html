@@ -66,34 +66,34 @@
      
 
        
-        <h2>Task List</h2>   
-        <table>
-            <thead>
-                <tr>
-                    <th>Task</th>
-                    <th>Owner</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            {% for item in items %}
-            <tbody>
-                <tr>
-                {% if item.done %}
-                <td><strike>{{ item.task }}</strike></td>
-                <td><strike>{{ item.owner }}</strike></td>
-                <td><strike>Close</strike></td>
-                {% else %}
-                <td>{{ item.task }}</td>
-                <td>{{ item.owner }}</td>
-                <td>Open</td>
-                {% endif %}
-                </tr>
-                {% empty %}
-                <tr><td>All task completed.</td></tr>
-            </tbody>
-            {% endfor %}
-        </table>
-        <a href="/add">Add an Item</a>
+        <h2>Add task to the list:</h2>
+        <form mathod="POST" action="add">
+            {% csrf_token %}
+            <div>
+                <p>
+                    <label for="id_task">Task:</label>
+                    <input type="text" id="id_task" name="item_task" />
+                </p>
+            </div>
+            <div>
+                <p>
+                    <label for="id_owner">Owner:</label>
+                    <input type="text" id="id_owner" name="item_owner" />
+                </p>
+            </div>
+            <div>
+                <p>
+                    <label for="id_done">Done:</label>
+                    <input type="checkbox" id="id_done" name="done" />
+                </p>
+            </div>
+            <div>
+                <p>
+                    <button type="submit">Add Item</button>
+                </p>
+            </div>
+        </form>
+
 
 
 </body>
