@@ -42,3 +42,18 @@ def edit_item(request, item_id):
         'form': form
     }
     return render(request, 'manager/edit_item.html', context)
+
+
+def toggle_item(request, item_id):
+    """ toggle items """
+    item = get_object_or_404(Item, id=item_id)
+    item.done = not item.done
+    item.save()
+    return redirect('get_manager_list')
+
+
+def delete_item(request, item_id):
+    """ delete items """
+    item = get_object_or_404(Item, id=item_id)
+    item.delete()
+    return redirect('get_manager_list')
