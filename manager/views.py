@@ -1,11 +1,13 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Item
+from .forms import ItemForm
 
 
 # Create your views here.
 
 
 def get_manager_list(request):
+    """ manager list """
     items = Item.objects.all()
     context = {
         'items': items
@@ -14,12 +16,29 @@ def get_manager_list(request):
 
 
 def add_item(request):
+    """ add item function """
     if request.method == 'POST':
-        task = request.POST.get('item_task')
-        owner = request.POST.get('item_owner')
-        done = 'done' in request.POST
-        Item.objects.create(task=task, owner=owner, done=done)
+        form = ItemForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('get_manager_list')
+    form = ItemForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'manager/add_item.html', context)
 
 
-        return redirect('get_manager_list')
-    return render(request, 'manager/add_item.html')
+def edit_item(request, item_id):
+    """ edit item function """
+    item = get_object_or_404(Item, id=item_id)
+    if request.method == 'POST':
+        form = ItemForm(request.POST, instance=item)
+        if form.is_valid():
+            form.save()
+            return redirect('get_manager_list')
+    form = ItemForm(instance=item)
+    context = {
+        'form': form
+    }
+    return render(request, 'manager/edit_item.html', context)

@@ -78,21 +78,28 @@
             {% for item in items %}
             <tbody>
                 <tr>
-                {% if item.done %}
-                <td><strike>{{ item.task }}</strike></td>
-                <td><strike>{{ item.owner }}</strike></td>
-                <td><strike>Close</strike></td>
-                {% else %}
-                <td>{{ item.task }}</td>
-                <td>{{ item.owner }}</td>
-                <td>Open</td>
-                {% endif %}
+                    {% if item.done %}
+                    <td><strike>{{ item.task }}</strike></td>
+                    <td><strike>{{ item.owner }}</strike></td>
+                    <td><strike>{{ item.done }}</strike></td>
+                    {% else %}
+                    <td>{{ item.task }}</td>
+                    <td>{{ item.owner }}</td>
+                    <td>{{ item.done }}</td>
+                    {% endif %}
+                    <td> 
+                        <a href="/edit/{{ item.id }}">
+                            <button>Edit</button>
+
+                        </a>
+                    </td>
                 </tr>
                 {% empty %}
                 <tr><td>All task completed.</td></tr>
             </tbody>
             {% endfor %}
         </table>
+        
         <a href="/add">Add an Item</a>
 
 

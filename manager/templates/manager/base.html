@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,48 +53,10 @@
                 </nav>
             </div>
 
-        
-        <!-- Projects -->
-        <div class="col-lg-3">
-            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group me-2" role="group" aria-label="First group">
-                <button type="button" class="btn btn-primary rounded-pill">Project one name</button>
-                <button type="button" class="btn btn-primary rounded-pill">Project two name</button>
-                <button type="button" class="btn btn-primary rounded-pill">Project three name</button>
-                <button type="button" class="btn btn-primary rounded-pill">Project four name</button>
-                </div>
-            </div>
-        </div>
-     
-
        
-        <h2>Add task to the list:</h2>
-        <form mathod="POST" action="add">
-            {% csrf_token %}
-            <div>
-                <p>
-                    <label for="id_task">Task:</label>
-                    <input type="text" id="id_task" name="item_task" />
-                </p>
-            </div>
-            <div>
-                <p>
-                    <label for="id_owner">Owner:</label>
-                    <input type="text" id="id_owner" name="item_owner" />
-                </p>
-            </div>
-            <div>
-                <p>
-                    <label for="id_done">Done:</label>
-                    <input type="checkbox" id="id_done" name="done" />
-                </p>
-            </div>
-            <div>
-                <p>
-                    <button type="submit">Add Item</button>
-                </p>
-            </div>
-        </form>
+{% block content %}
+<!-- Content Goes here -->
+{% endblock content %}
 
 
 
