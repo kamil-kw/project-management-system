@@ -53,7 +53,7 @@
 
        
         <h2>Add task to the list:</h2>
-        <form method="POST" action="{% url 'add' %}">
+        <form method="POST" enctype="multipart/form-data" action="{% url 'add' %}">
             
             {% csrf_token %}
             {{ form.as_p }}

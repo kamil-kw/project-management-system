@@ -72,6 +72,7 @@
                 <tr>
                     <th>Task</th>
                     <th>Owner</th>
+                    <th>Due date</th>
                     <th>Status</th>
                     <th>Edit</th>
                     <th>Toggle</th>
@@ -84,11 +85,13 @@
                     {% if item.done %}
                     <td><strike>{{ item.task }}</strike></td>
                     <td><strike>{{ item.owner }}</strike></td>
-                    <td><strike>{{ item.done }}</strike></td>
+                    <td><strike>{{ item.due_date }}</strike></td>
+                    <td><strike>Closed</strike></td>
                     {% else %}
                     <td>{{ item.task }}</td>
                     <td>{{ item.owner }}</td>
-                    <td>{{ item.done }}</td>
+                    <td>{{ item.due_date }}</td>
+                    <td>Open</td>
                     {% endif %}
                     <td> 
                         <a href="/edit/{{ item.id }}">
