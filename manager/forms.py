@@ -14,5 +14,3 @@ class ItemForm(forms.ModelForm):
         widgets = {
             'due_date': DateInput(),
         }
-
-        
