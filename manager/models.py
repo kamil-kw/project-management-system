@@ -6,15 +6,12 @@ from django.db import models
 class Item(models.Model):
     """ List items """
     task = models.CharField(max_length=300, null=False, blank=False)
-    due_date = models.DateTimeField(null=True)
+    due_date = models.DateTimeField(null=False)
     owner = models.CharField(max_length=50, null=False, blank=False)
     done = models.BooleanField(null=False, blank=False, default=False)
 
-
     def __str__(self):
-        return self.tasks
+        return self.task
 
-    
     def __str__(self):
         return self.owner
-

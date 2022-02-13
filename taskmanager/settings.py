@@ -33,8 +33,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['project-task.herokuapp.com', 'localhost']
 
 
-
-
 # Application definition
 
 INSTALLED_APPS = [
