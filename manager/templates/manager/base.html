@@ -13,7 +13,7 @@
     <div class="navigation">
         <nav class="navbar navbar-light bg-light navbar-default navbar-static-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="manager/manager_list.html">Task Manager</a>
+                <a class="navbar-brand" href="{% url 'get_manager_list' %}">Task Manager</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -28,29 +28,36 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="manager_list.html">Home</a>
+                                <a class="nav-link active" aria-current="page" href="{% url 'get_manager_list' %}">Home</a>
                             </li>
+                            {% if user.is_authenticated %}
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Gantt Chart</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Delay calculators</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Critical Path</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">RAIDD</a>
+                                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    Actions
+                                    Coming Soon
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                                    <li><a class="dropdown-item" href="{% url 'add' %}">Add task</a></li>
+                                    <li><a class="dropdown-item" href="#">Gantt Chart</a></li>
+                                    
+                                </ul>
+                                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Critical Path</a></li>
+                                </ul>
+                                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                    <li><a class="dropdown-item" href="#">RAIDD</a></li>
                                 </ul>
                             </li>
+                            {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                            </li>
+                            {% endif %}
                         </ul>
                     </div>
                 </div>
