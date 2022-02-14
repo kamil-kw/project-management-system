@@ -28,7 +28,7 @@ class TestViews(TestCase):
         
     def test_can_add_item(self):
         """[test if test can add item]"""
-        response = self.client.post('/add', {'task': 'Test', 'owner':'Tester', 'due_date':'2021-05-19T01:55:10+0000', 'done':'True'}, follow=True)
+        response = self.client.post('/add/', {'task': 'Test', 'owner':'Tester', 'due_date':'2021-05-19T01:55:10+0000', 'done':'True'})
         self.assertRedirects(response, '/')
 
         
