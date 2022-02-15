@@ -1,16 +1,32 @@
 from django import forms
-from .models import Item
+from .models import Item, Project
+
+
+project_choices = Project.objects.all().values_list('name', 'name')
+
+project_list = []
+
+for choice in project_choices:
+    project_list.append(choice)
 
 
 class DateInput(forms.DateInput):
+    """[to define input type for calendar picker]"""
     input_type = 'date'
 
 
 class ItemForm(forms.ModelForm):
     """ form items """
     class Meta:
+        """[ fields list and widget ]"""
         model = Item
-        fields = ['task', 'owner', 'due_date', 'done']
+
+        fields = ['project', 'task', 'owner', 'due_date', 'done']
         widgets = {
-            'due_date': DateInput(),
+            'due_date': DateInput(attrs={'class': 'form-control'}),
+            'task': forms.Textarea(attrs={'class': 'form-control'}),
+            'owner': forms.TextInput(attrs={'class': 'form-control'}),
+            'project' : forms.Select(choices = project_list, attrs={'class': 'form-control'}),
         }
+
+placeholder = "Country,Year & Title"

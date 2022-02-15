@@ -3,6 +3,7 @@
 
 {% block content %}
 <!-- Content Goes here -->
+{% if user.is_authenticated %}
 <h2>Task List</h2>
 <table>
     <thead>
@@ -57,5 +58,10 @@
 </table>
 
 <a href="/add">Add an Item</a>
+{% else %}
+
+<p>Please <a class="button" href="{% url 'account_login' %}">Login</a> or <a class="button" href="{% url 'account_signup' %}">Register</a></p>
+
+{% endif %}
 
 {% endblock content %}

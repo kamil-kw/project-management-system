@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.get_manager_list, name='get_manager_list'),
     path('add/', views.add_item, name='add'),
+    path('add_project/', views.AddProject.as_view(), name='add_project'),
     path('edit/<item_id>', views.edit_item, name='edit'),
     path('toggle/<item_id>', views.toggle_item, name='toggle'),
     path('delete/<item_id>', views.delete_item, name='delete'),

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Item
+from django.views.generic import ListView, DetailView, CreateView
+from .models import Item, Project
 from .forms import ItemForm
 
 
@@ -57,3 +58,18 @@ def delete_item(request, item_id):
     item = get_object_or_404(Item, id=item_id)
     item.delete()
     return redirect('get_manager_list')
+
+
+""" using classes"""
+
+class HomeView(ListView):
+    model = ItemForm
+    template_name = 'manager/manager_list'
+
+
+
+class AddProject(CreateView):
+    """ add project function """
+    model = Project
+    template_name = 'manager/add_project.html'
+    fields = '__all__'
