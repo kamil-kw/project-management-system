@@ -5,6 +5,20 @@ from .forms import ItemForm
 
 
 # Create your views here.
+""" using classes"""
+
+class HomeView(ListView):
+    """[add home view template]"""
+    model = ItemForm
+    template_name = 'manager/manager_list.html'
+
+
+
+class AddProject(CreateView):
+    """ add project function """
+    model = Project
+    template_name = 'manager/add_project.html'
+    fields = '__all__'
 
 
 def get_manager_list(request):
@@ -59,17 +73,3 @@ def delete_item(request, item_id):
     item.delete()
     return redirect('get_manager_list')
 
-
-""" using classes"""
-
-class HomeView(ListView):
-    model = ItemForm
-    template_name = 'manager/manager_list'
-
-
-
-class AddProject(CreateView):
-    """ add project function """
-    model = Project
-    template_name = 'manager/add_project.html'
-    fields = '__all__'

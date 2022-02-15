@@ -28,5 +28,3 @@ class ItemForm(forms.ModelForm):
             'owner': forms.TextInput(attrs={'class': 'form-control'}),
             'project' : forms.Select(choices = project_list, attrs={'class': 'form-control'}),
         }
-
-placeholder = "Country,Year & Title"
