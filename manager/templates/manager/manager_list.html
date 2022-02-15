@@ -8,6 +8,7 @@
 <table>
     <thead>
         <tr>
+            <th>Project</th>
             <th>Task</th>
             <th>Owner</th>
             <th>Due date</th>
@@ -21,11 +22,13 @@
     <tbody>
         <tr>
             {% if item.done %}
+            <td><strike>{{ item.project }}</strike></td>
             <td><strike>{{ item.task }}</strike></td>
             <td><strike>{{ item.owner }}</strike></td>
             <td><strike>{{ item.due_date }}</strike></td>
             <td><strike>Closed</strike></td>
             {% else %}
+            <td>{{ item.project }}</td>
             <td>{{ item.task }}</td>
             <td>{{ item.owner }}</td>
             <td>{{ item.due_date }}</td>
