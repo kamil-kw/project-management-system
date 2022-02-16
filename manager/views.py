@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, CreateView
 from .models import Item, Project
 from .forms import ItemForm
 
@@ -11,7 +11,6 @@ class HomeView(ListView):
     """[add home view template]"""
     model = ItemForm
     template_name = 'manager/manager_list.html'
-
 
 
 class AddProject(CreateView):

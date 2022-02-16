@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Montserrat:wght@400;600&display=swap');
+/* font-family: 'Merienda', cursive;
+font-family: 'Montserrat', sans-serif; */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: rgba(33, 37, 41, 1);
+  }
+  
+  main {
+    flex: 1 0 auto;
+  }
+
+  .nav-font {
+    font-family: 'Merienda', cursive;
+    font-weight: 800;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .site {
+    background-color: brown;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+  }
+  .footer-font {
+    font-family: 'Merienda', cursive;
+    font-weight: 800;
+    color:aliceblue;
+  }
+
+  h2 {
+    color: aliceblue;
+  }

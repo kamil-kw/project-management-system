@@ -4,10 +4,12 @@
 {% block content %}
 <!-- Content Goes here -->
 {% if user.is_authenticated %}
-<h2>Task List</h2>
-<table>
-    <thead>
-        <tr>
+<h2 class="center">Task List</h2>
+
+<div class="table-area">
+    <table class="table table-dark table-striped table-sm">
+        <thead>
+        <tr class="table-primary">
             <th>Project</th>
             <th>Task</th>
             <th>Owner</th>
@@ -17,10 +19,10 @@
             <th>Toggle</th>
             <th>Delete</th>
         </tr>
-    </thead>
-    {% for item in items %}
-    <tbody>
+        </thead>
+        {% for item in items %}
         <tr>
+            <tbody>
             {% if item.done %}
             <td><strike>{{ item.project }}</strike></td>
             <td><strike>{{ item.task }}</strike></td>
@@ -36,19 +38,19 @@
             {% endif %}
             <td>
                 <a href="/edit/{{ item.id }}">
-                    <button>Edit</button>
+                    <button type="button" class="btn btn-primary">Edit</button>
 
                 </a>
             </td>
             <td>
                 <a href="/toggle/{{ item.id }}">
-                    <button>Toggle</button>
+                    <button type="button" class="btn btn-success">Toggle</button>
 
                 </a>
             </td>
             <td>
                 <a href="/delete/{{ item.id }}">
-                    <button>Delete</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
                 </a>
             </td>
         </tr>
@@ -56,11 +58,12 @@
         <tr>
             <td>All task completed.</td>
         </tr>
-    </tbody>
-    {% endfor %}
-</table>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
 
-<a href="/add">Add an Item</a>
+<a type="button" class="btn btn-warning" href="/add">Add an Item</a>
 {% else %}
 
 <p>Please <a class="button" href="{% url 'account_login' %}">Login</a> or <a class="button" href="{% url 'account_signup' %}">Register</a></p>
