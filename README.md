@@ -9,6 +9,9 @@ Welcome to my Fourth Full Stack Course project. This is a Project Management Sys
 
 The inspiration for this project was my site learning process of becoming a certified SCRUM master. As a SCRUM Master, one of the most needed items is to have an area to collect and monitor workload, progress, roadblocks.
 
+Project is built with concept of being a product like tool capable to adjust according to the customer needs.
+
+
 
 
 <a name="tableOfContents"></a>
@@ -51,6 +54,9 @@ The inspiration for this project was my site learning process of becoming a cert
 
 # **1. UX**
 
+As a next step on my path of becoming a software developer from zero to hero 😊, I'm presenting a Project Manager Tool.
+As mentioned in my last projects my ultimate goal is to change my career path and become a full-time developer. Here I will be showing my new acquired skill, which is Django.
+As part of my portfolio collection, which can be shown to my potential future employers, and potentially be used by myself. I have decided to build a product that can support day to day workload of Project Managers or SCRUM masters. As a first part of this will be creating project task manager, where all projects can be collected and monitored during each project. 
 
 
 [Back to Table Of Content](#tableOfContents)
@@ -63,7 +69,9 @@ The inspiration for this project was my site learning process of becoming a cert
 
 ##  **1.1.1 Project Goals**
 
+A project goal was to create a to set PM tool belt were project task can be monitored, this page have a potential to build more tools in upcoming project 5 were additional features like Gantt Chart, Critical Path, Delay Calculator, and Task Time Calculator will be added.
 
+The reason for this web page is to create tool which I can use as a potential PM SCRUM master in the future also to create product which can be a sellable. 
 
 <a name="userStories"></a>
 
