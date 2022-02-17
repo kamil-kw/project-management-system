@@ -66,11 +66,13 @@
             </nav>
         </div>
 
+        <div class="container">
+            {% block content %}
+            <!-- Content Goes here -->
+    
+            {% endblock %}
 
-        {% block content %}
-        <!-- Content Goes here -->
-
-        {% endblock content %}
+        </div>
         <!-- Footer -->
         <footer class="page-footer font-small bg-dark pt-4">
 
