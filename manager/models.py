@@ -16,6 +16,7 @@ class Project(models.Model):
         """[define absolute url for views classes]"""
         return reverse('get_manager_list')
 
+
 class Item(models.Model):
     """ Project task list items """
     project = models.CharField(max_length=300, default='Not assigned')
