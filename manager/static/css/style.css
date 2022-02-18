@@ -7,6 +7,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     background-color: rgba(33, 37, 41, 1);
+    font: 1rem/1.5 var(--bs-font-sans-serif);
   }
   
   main {
@@ -20,6 +21,10 @@ body {
 
   .center {
     text-align: center;
+  }
+
+  label {
+    color: aliceblue;
   }
 
   .site {
@@ -37,6 +42,6 @@ body {
     color:aliceblue;
   }
 
-  h2 {
+  h2, h3, p {
     color: aliceblue;
   }
