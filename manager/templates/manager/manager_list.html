@@ -63,10 +63,15 @@
     </table>
 </div>
 
-<a type="button" class="btn btn-warning" href="/add">Add an Item</a>
+<a type="button" class="btn btn-warning col" href="/add">Add an Item</a>
 {% else %}
+<div class="align-content-center flex-wrap">
+<h3 class="col">Welcome in the Project Management System</h3>
 
-<p>Please <a class="button" href="{% url 'account_login' %}">Login</a> or <a class="button" href="{% url 'account_signup' %}">Register</a></p>
+<p class="col">This is the place where your journey begin, 
+so please <a class="button" href="{% url 'account_login' %}">Login</a> if you are a user or <a class="button" href="{% url 'account_signup' %}">Register</a> yourself 
+to receive an access to this page</p>
+</div>
 
 {% endif %}
 
