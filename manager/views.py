@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, DeleteView
 from .models import Item, Project
-from .forms import ItemForm
+from .forms import ItemForm, ProjectChoices
 
 
 # Create your views here.
@@ -12,12 +12,25 @@ class HomeView(ListView):
     model = ItemForm
     template_name = 'manager/manager_list.html'
 
+class ProjectView(ListView):
+    """[project view template]"""
+    model = Project
+    template_name = 'manager/projects.html'
+
 
 class AddProject(CreateView):
     """ add project function """
     model = Project
     template_name = 'manager/add_project.html'
     fields = '__all__'
+    
+class ProjectDeleteView(DeleteView):
+    """ add project function """
+    model = Project
+    template_name = 'manager/delete_project.html'
+    fields = '__all__'
+
+
 
 
 def get_manager_list(request):
