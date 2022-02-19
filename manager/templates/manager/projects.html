@@ -5,12 +5,43 @@
 <h2>Add project to the project list:</h2>
 <form method="POST" enctype="multipart/form-data" action="{% url 'projects' %}">
 
+    <h2 class="center">Project List</h2>
     {% csrf_token %}
-    {{ form.as_p }}
-    <div>
-        <p>
-            <button type="submit">Add Project</button>
-        </p>
-    </div>
+    <div class="table-area">
+        <table class="table table-dark table-striped table-sm">
+            <thead>
+            <tr class="table-primary">
+                <th>Project</th>
+            </tr>
+            </thead>
+            {% for project in project_list %}
+            <tr>
+                <tbody>
+                <td>{{ project }}</td>
+                <td>
+                    <a href="/edit/{{ item.id }}">
+                        <button type="button" class="btn btn-primary">Edit</button>
+    
+                    </a>
+                </td>
+                <td>
+                    <a href="/delete/{{ choice.id }}">
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td>All task completed.</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
 </form>
+</div>
+<p>
+    <a href="{% url 'add_project' %}">Add Project</a>
+</p>
+</div>
 {% endblock content %}
