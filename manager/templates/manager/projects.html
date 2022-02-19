@@ -19,13 +19,12 @@
                 <tbody>
                 <td>{{ project }}</td>
                 <td>
-                    <a href="/edit/{{ item.id }}">
-                        <button type="button" class="btn btn-primary">Edit</button>
-    
+                    <a href="/update_project/{{ project.id }}">
+                        <button type="button" class="btn btn-primary">Update</button>
                     </a>
                 </td>
                 <td>
-                    <a href="/delete/{{ choice.id }}">
+                    <a href="/delete_project/{{ project.id }}">
                         <button type="button" class="btn btn-danger">Delete</button>
                     </a>
                 </td>
