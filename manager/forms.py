@@ -26,6 +26,6 @@ class ItemForm(forms.ModelForm):
             'due_date': DateInput(attrs={'class': 'form-control'}),
             'task': forms.Textarea(attrs={'class': 'form-control'}),
             'owner': forms.TextInput(attrs={'class': 'form-control'}),
-            'project' : forms.Select(choices = ProjectChoices.project_list, 
-                                     attrs={'class': 'form-control'}),
+            'project': forms.Select(choices=ProjectChoices.project_list,
+                                    attrs={'class': 'form-control'}),
         }
