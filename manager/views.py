@@ -10,8 +10,9 @@ from django.urls import reverse_lazy
 
 class HomeView(ListView):
     """[add home view template]"""
-    model = ItemForm
+    model = Item
     template_name = 'manager/manager_list.html'
+    ordering = ['due_date']
 
 
 class ProjectView(ListView):
@@ -43,7 +44,7 @@ class ProjectDeleteView(DeleteView):
 
 def get_manager_list(request):
     """ manager list """
-    items = Item.objects.all()
+    items = Item.objects.all().order_by('due_date')
     context = {
         'items': items
     }
