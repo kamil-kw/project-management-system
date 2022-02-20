@@ -32,8 +32,9 @@ body {
   }
 
   footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
+    height: 10vw;
     width: 100vw;
   }
   .footer-font {

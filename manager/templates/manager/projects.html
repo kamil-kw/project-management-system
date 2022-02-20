@@ -2,7 +2,7 @@
 
 
 {% block content %}
-<h2>Add project to the project list:</h2>
+<h2>See project list:</h2>
 <form method="POST" enctype="multipart/form-data" action="{% url 'projects' %}">
 
     <h2 class="center">Project List</h2>
@@ -12,6 +12,8 @@
             <thead>
             <tr class="table-primary">
                 <th>Project</th>
+                <th>Update Project Details</th>
+                <th>Delete Project</th>
             </tr>
             </thead>
             {% for project in project_list %}
@@ -31,7 +33,7 @@
             </tr>
             {% empty %}
             <tr>
-                <td>All task completed.</td>
+                <td>Here is no project in the list.</td>
             </tr>
             {% endfor %}
             </tbody>
@@ -40,7 +42,7 @@
 </form>
 </div>
 <p>
-    <a href="{% url 'add_project' %}">Add Project</a>
+    <a class="btn btn-primary" href="{% url 'add_project' %}">Add Project</a>
 </p>
 </div>
 {% endblock content %}

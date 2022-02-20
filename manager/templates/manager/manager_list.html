@@ -27,13 +27,13 @@
             <td><strike>{{ item.project }}</strike></td>
             <td><strike>{{ item.task }}</strike></td>
             <td><strike>{{ item.owner }}</strike></td>
-            <td><strike>{{ item.due_date }}</strike></td>
+            <td><strike>{{ item.due_date|date:"d/M/y"|lower }}</strike></td>
             <td><strike>Closed</strike></td>
             {% else %}
             <td>{{ item.project }}</td>
             <td>{{ item.task }}</td>
             <td>{{ item.owner }}</td>
-            <td>{{ item.due_date }}</td>
+            <td>{{ item.due_date|date:"D d M Y"|lower }}</td>
             <td>Open</td>
             {% endif %}
             <td>
