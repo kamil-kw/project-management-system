@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, CreateView, DeleteView, UpdateView
+from django.urls import reverse_lazy
 from .models import Item, Project
 from .forms import ItemForm
-from django.urls import reverse_lazy
+from .filters import DueDateFilter
 
 
 # Create your views here. """ using classes"""
@@ -45,8 +46,14 @@ class ProjectDeleteView(DeleteView):
 def get_manager_list(request):
     """ manager list """
     items = Item.objects.all().order_by('due_date')
+    
+    myFilter = DueDateFilter(request.GET, queryset=items)
+    items = myFilter.qs
+    
     context = {
-        'items': items
+        'items': items,
+        'myFilter': myFilter,
+
     }
     return render(request, 'manager/manager_list.html', context)
 
