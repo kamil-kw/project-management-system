@@ -6,6 +6,21 @@
 {% if user.is_authenticated %}
 <h2 class="center">Task List</h2>
 
+<div class="row row-cols-1 row-cols-md-1 g-4">
+    <div class="col">
+        <div class="card card-body">
+            <form method="get">
+                {{ myFilter.form.as_p }}
+
+                <button class="btn btn-primary" type="submit">
+                    Search
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
 <div class="table-area">
     <table class="table table-dark table-striped table-sm">
         <thead>
@@ -27,13 +42,13 @@
             <td><strike>{{ item.project }}</strike></td>
             <td><strike>{{ item.task }}</strike></td>
             <td><strike>{{ item.owner }}</strike></td>
-            <td><strike>{{ item.due_date|date:"d/M/y"|lower }}</strike></td>
+            <td><strike>{{ item.due_date|date:"D d M Y"}}</strike></td>
             <td><strike>Closed</strike></td>
             {% else %}
             <td>{{ item.project }}</td>
             <td>{{ item.task }}</td>
             <td>{{ item.owner }}</td>
-            <td>{{ item.due_date|date:"D d M Y"|lower }}</td>
+            <td>{{ item.due_date|date:"D d M Y" }}</td>
             <td>Open</td>
             {% endif %}
             <td>

@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
 
     'manager',
+    'django_filters',
     'cloudinary_storage',
     'cloudinary',
 ]

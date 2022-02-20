@@ -21,7 +21,7 @@ class ItemForm(forms.ModelForm):
         """[ fields list and widget ]"""
         model = Item
 
-        fields = ['project', 'task', 'owner', 'due_date', 'done']
+        fields = ['project', 'task', 'owner', 'due_date', 'done'] 
         widgets = {
             'due_date': DateInput(attrs={'class': 'form-control'}),
             'task': forms.Textarea(attrs={'class': 'form-control'}),
