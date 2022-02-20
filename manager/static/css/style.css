@@ -46,3 +46,10 @@ body {
   h2, h3, p {
     color: aliceblue;
   }
+
+  .search > p > input {
+    position: relative;
+    left: 10vw;
+    float: right;
+
+  }

@@ -6,12 +6,12 @@
 {% if user.is_authenticated %}
 <h2 class="center">Task List</h2>
 
-<div class="row row-cols-1 row-cols-md-1 g-4">
-    <div class="col">
-        <div class="card card-body">
-            <form method="get">
-                {{ myFilter.form.as_p }}
+<div class="row">
+    <div class="col-12">
+        <div class="table-cell card card-group bg-dark">
+            <form class="search" method="get">
 
+                {{ myFilter.form.as_p }}
                 <button class="btn btn-primary" type="submit">
                     Search
                 </button>
