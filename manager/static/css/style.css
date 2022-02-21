@@ -31,16 +31,17 @@ body {
     background-color: brown;
   }
 
-  footer {
-    position: relative;
-    bottom: 0;
-    height: 10vw;
-    width: 100vw;
-  }
   .footer-font {
     font-family: 'Merienda', cursive;
     font-weight: 800;
-    color:aliceblue;
+    color: aliceblue;
+  }
+
+  footer {
+    
+    bottom: 0;
+    height: auto;
+    width: 100vw;
   }
 
   h2, h3, p, details  {
