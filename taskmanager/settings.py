@@ -53,6 +53,9 @@ INSTALLED_APPS = [
     # main app
     'manager',
     
+    'cloudinary_storage',
+    'cloudinary',
+    
     # Django filters 
     'django_filters',
 ]
