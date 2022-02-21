@@ -48,10 +48,9 @@ def get_manager_list(request):
     """ manager list """
     items = Item.objects.all().order_by('due_date')
     
-    p = Paginator(Item.objects.all(), 3)
+    p = Paginator(Item.objects.all().order_by('due_date'), 7)
     page = request.GET.get('page')
     pageItems = p.get_page(page)
-    
     
     myFilter = DueDateFilter(request.GET, queryset=items)
     items = myFilter.qs

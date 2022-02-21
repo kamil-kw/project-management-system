@@ -5,23 +5,27 @@
 <!-- Content Goes here -->
 {% if user.is_authenticated %}
 <h2 class="center">Task List</h2>
-<details>
-    <summary class="how">Filter data</summary>
-<div class="row">
-    <div class="col-12">
-        <div class="table-cell card card-group bg-dark">
-            <form class="search" method="get">
-                {{ myFilter.form.as_p }}
 
-                <button class="btn btn-primary" type="submit">
-                    Search
-                </button>
-            </form>
-        </div>
-    </div>
+        
+            
+            <div class="row">
+                <div class="col">
+                    <details>
+                        <summary>Filter data</summary>
+                        <div class="table-cell card card-group bg-dark">
+                            <form class="search" method="get">
+                                {{ myFilter.form.as_p }}
 
-</div>
-</details>
+                                <button class="btn btn-primary" type="submit">
+                                    Search
+                                </button>
+                            </form>
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+        
 <div class="table-area">
     <table class="table table-dark table-striped table-sm">
         <thead>
