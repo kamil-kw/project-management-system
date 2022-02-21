@@ -2,11 +2,11 @@
 /* font-family: 'Merienda', cursive;
 font-family: 'Montserrat', sans-serif; */
 
-body {
+html > body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: rgba(33, 37, 41, 1);
+    background-color: var(--bs-gray-900);
     font: 1rem/1.5 var(--bs-font-sans-serif);
   }
   
