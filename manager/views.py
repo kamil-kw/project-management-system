@@ -1,13 +1,14 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy
+from django.core.paginator import Paginator
 from .models import Item, Project
+
 from .forms import ItemForm
 from .filters import DueDateFilter
 
 
 # Create your views here. """ using classes"""
-
 
 class HomeView(ListView):
     """[add home view template]"""
@@ -47,12 +48,18 @@ def get_manager_list(request):
     """ manager list """
     items = Item.objects.all().order_by('due_date')
     
+    p = Paginator(Item.objects.all(), 3)
+    page = request.GET.get('page')
+    pageItems = p.get_page(page)
+    
+    
     myFilter = DueDateFilter(request.GET, queryset=items)
     items = myFilter.qs
-    
+
     context = {
         'items': items,
         'myFilter': myFilter,
+        'pageItems': pageItems,
 
     }
     return render(request, 'manager/manager_list.html', context)
