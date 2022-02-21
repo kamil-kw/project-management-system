@@ -47,7 +47,7 @@ body {
     color: aliceblue;
   }
 
-  .search > p > input {
+  .search > p > input, select {
     position: relative;
     left: 10vw;
     float: right;
