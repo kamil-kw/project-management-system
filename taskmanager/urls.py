@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 from manager import views
 
 
@@ -32,4 +34,4 @@ urlpatterns = [
     path('add_project/', views.AddProject.as_view(), name='add_project'),
     path('update_project/<pk>', views.ProjectUpdateView.as_view(), name='update_project'),
     path('delete_project/<pk>', views.ProjectDeleteView.as_view(), name='delete_project'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
