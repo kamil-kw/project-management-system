@@ -50,10 +50,11 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
 
+    # main app
     'manager',
+    
+    # Django filters 
     'django_filters',
-    'cloudinary_storage',
-    'cloudinary',
 ]
 
 SITE_ID = 1
