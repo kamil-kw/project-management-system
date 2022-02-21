@@ -43,8 +43,13 @@ body {
     color:aliceblue;
   }
 
-  h2, h3, p {
+  h2, h3, p  {
     color: aliceblue;
+  }
+
+  .page-num {
+    color: aliceblue;
+    text-align: center;
   }
 
   .search > p > input, select {
@@ -52,4 +57,8 @@ body {
     left: 10vw;
     float: right;
     width: 27vw;
+  }
+
+  .add-btn {
+    float: right;
   }
