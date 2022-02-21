@@ -5,7 +5,8 @@
 <!-- Content Goes here -->
 {% if user.is_authenticated %}
 <h2 class="center">Task List</h2>
-
+<details>
+    <summary class="how">Filter data</summary>
 <div class="row">
     <div class="col-12">
         <div class="table-cell card card-group bg-dark">
@@ -20,7 +21,7 @@
     </div>
 
 </div>
-
+</details>
 <div class="table-area">
     <table class="table table-dark table-striped table-sm">
         <thead>
