@@ -3,7 +3,6 @@ from django.views.generic import ListView, CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy
 from django.core.paginator import Paginator
 from .models import Item, Project
-
 from .forms import ItemForm
 from .filters import DueDateFilter
 
@@ -47,11 +46,12 @@ class ProjectDeleteView(DeleteView):
 def get_manager_list(request):
     """ manager list """
     items = Item.objects.all().order_by('due_date')
-    
-    p = Paginator(Item.objects.all().order_by('due_date'), 7)
+
+
+    pg = Paginator(Item.objects.all().order_by('due_date'), 7)
     page = request.GET.get('page')
-    pageItems = p.get_page(page)
-    
+    pageItems = pg.get_page(page)
+
     myFilter = DueDateFilter(request.GET, queryset=items)
     items = myFilter.qs
 
@@ -59,7 +59,6 @@ def get_manager_list(request):
         'items': items,
         'myFilter': myFilter,
         'pageItems': pageItems,
-
     }
     return render(request, 'manager/manager_list.html', context)
 
