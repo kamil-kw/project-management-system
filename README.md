@@ -259,7 +259,7 @@ Fix
 
 Fix
 
-![301 redirect Error](images/readme_images/E1_solution_True.png)
+![301 redirect Error](images/readme_images/E3_jinja_url.png)
 
 * Extending base.html template to allauth html files
     * Issue with a file structure and which was not able to pull details from base.html
