@@ -146,6 +146,7 @@ During creation journey I did use:
 * [Bootstrap](https://docs.python.org/3/library/os.html)
     * Used for os.environ
 
+
 [Back to Table Of Content](#tableOfContents)
 
 <a name="testing"></a>
@@ -176,15 +177,18 @@ During creation journey I did use:
 
 # **5. Development Cycle**
 
-Page was built based on diagram and user stories. The first days of this project, I've focused with installing bandles and building the connection with a database & cloudinary. Once built the connection with database, I have deployed project to Heroku to avoid potential errors with deployed version.
 
-CRUD functionality over task list was a next phase of this implementation, to ensure user is capable to manipulate data by adding, updating, deleting and marking as completed to have a full control over it. 
+Page was building based on diagram and user stories. The first days of this project I was focused with installing packets and building the connection with a database & cloudinary. Once build the connection with database I did deploy project to Heroku to avoid potential error with deployed version.
 
-Adding Calendar picker to due date field to avoid potential issues with typing date in the different way as is expected by form, as well as improve UX by delivering visual ability to locate chosen date on the calendar it self.
+CRUD functionality over task list was a next phase of this implementations, to ensure user is capable to manipulate data by adding, updating, deleting and marking as completed to have a full control over a data.
 
-As per Agile approach the next features appear during next iteration cycle where an issue with building a separate way to store Projects in form of the list to have ability to standardize projects naming convention and keep control over a data and future task creation. Tu ensure the project data is also coming under a CRUD functionality I decided to build it in the class view model, which give me an opportunity to learn this approach in real situation.
+Adding Calendar picker to due date field to avoid potential issues with typing date in the different way as is expected by form as well as improve UX by delivering visual ability to locate chosen date on the calendar it self.
 
-Filter option was implemented to reduce a displayed data and to give a better end user experience. To avoid overwhelming number of displayed data the pagination was implemented.
+As per Agile approach the next features appear during next iteration cycle where an issue with building a separate way to store Projects in form of the list to have ability to standardize projects naming convention and keep control over a data and future task creation.
+Tu ensure the project data is also coming under a CRUD functionality I decided to build it in the class view model, which give me an opportunity to learn this approach in real situation.
+
+Filter option was implemented to reduce a displayed data and to give a better end user experience.
+To avoid overwhelming number of displayed data the pagination was implemented.
 
 
 
@@ -235,6 +239,7 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 <a name="fixedBugs"></a>
 
 ## **8.1 Fixed bugs**
+
 
 During development I did face multiple bugs: 
 
@@ -299,6 +304,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path(......
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
 
 <a name="remainBugs"></a>
    
