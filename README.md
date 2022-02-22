@@ -108,6 +108,18 @@ diagram below:
 
 <a name="technologies"></a>
 
+•	Responsive design
+•	Navigation Menu (Site Wide)
+•	Postgress databases to store information and user login/profile information
+•	CRUD Functionality
+•	Filter list details functionality
+•	Filter due date range
+•	Hiding filter once not in use
+•	Login functionality
+•	Logout functionality
+•	Register functionality
+
+
 Importance and Difficulty table:
 
 ![Hero image](images/readme_images/importance_difficulty.png)
@@ -122,10 +134,14 @@ During creation journey I did use:
     * For storing project code written in gitpod
 * [W3School](https://www.w3schools.com/)
     * For problem solving and code searching
+* [Stack Overflow](https://stackoverflow.com/)
+    * For problem solving and code searching
 * [PEP8 validator](http://pep8online.com/)
     * For checking python convention
 * [Heroku](https://id.heroku.com/login)
     * To deploy project into live environment
+* [Cloudinary](https://cloudinary.com/)
+    * To store static files 
 
 [Back to Table Of Content](#tableOfContents)
 
