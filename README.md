@@ -173,6 +173,17 @@ During creation journey I did use:
 
 # **5. Development Cycle**
 
+Page was building based on diagram and user stories. The first days of this project I was focused with installing packets and building the connection with a database & cloudinary. Once build the connection with database I did deploy project to Heroku to avoid potential error with deployed version.
+
+CRUD functionality over task list was a next phase of this implementations, to ensure user is capable to manipulate data by adding, updating, deleting and marking as completed to have a full control over a data.
+
+Adding Calendar picker to due date field to avoid potential issues with typing date in the different way as is expected by form as well as improve UX by delivering visual ability to locate chosen date on the calendar it self.
+
+As per Agile approach the next features appear during next iteration cycle where an issue with building a separate way to store Projects in form of the list to have ability to standardize projects naming convention and keep control over a data and future task creation.
+Tu ensure the project data is also coming under a CRUD functionality I decided to build it in the class view model, which give me an opportunity to learn this approach in real situation.
+
+Filter option was implemented to reduce a displayed data and to give a better end user experience.
+To avoid overwhelming number of displayed data the pagination was implemented.
 
 
 [Back to Table Of Content](#tableOfContents)
@@ -223,11 +234,23 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 
 ## **8.1 Fixed bugs**
 
+During development I did face multiple bugs:
+   * Issue with page rendering (Ger)
+      Page wasent rendering due to lack of implementing url by using jinja template
+   * Extending base.html template to allauth html files
+      Issue with a file structure and which was not able to pull details from base.html
+   * Display CSS setting in the Heroku deployed version (Alan, John)
+      Issue related with not using a correct folders structure, link to the static files was incorectly writen
 
 <a name="remainBugs"></a>
+   
+No remainig bugs
 
 ## **8.2 Remaining Bugs**
 
+No bugs remaining
+
+All known bugs were corrected before deployment
 
 [Back to Table Of Content](#tableOfContents)
 
@@ -235,7 +258,12 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 
 # **9. Credits**
 
-Heroku deployment instructions from Code Institute
-
-GitHub Python Template [Code Institute](https://codeinstitute.net/)
-
+* Heroku deployment instructions from Code Institute
+* Hello Django and Djngo blog from code institute
+* Django Blog by Codemy
+* Stack overflow to support with debugig
+* CI Tutor Support for Help with
+   * Issue with page rendering (Ger)
+   * Extending base.html template to allauth html files
+   * Display CSS setting in the Heroku deployed version (Alan, John)
+* GitHub Python Template [Code Institute](https://codeinstitute.net/)
