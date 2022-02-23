@@ -45,22 +45,21 @@ class ProjectDeleteView(DeleteView):
 
 def get_manager_list(request):
     """ manager list """
-    items = Item.objects.all().order_by('due_date')
-
-
-    pg = Paginator(Item.objects.all().order_by('due_date'), 7)
+    context = {}
+    
+    
+    
+    my_filter = DueDateFilter(request.GET, queryset= Item.objects.all().order_by('due_date'), ) 
+    
+    context['my_filter'] = my_filter
+    
+    paginated_filtered = Paginator(my_filter.qs, 7)
     page = request.GET.get('page')
-    pageItems = pg.get_page(page)
-
-    myFilter = DueDateFilter(request.GET, queryset=items)
-    items = myFilter.qs
-
-    context = {
-        'items': items,
-        'myFilter': myFilter,
-        'pageItems': pageItems,
-    }
-    return render(request, 'manager/manager_list.html', context)
+    page_items = paginated_filtered.get_page(page)
+    
+    context['page_items'] = page_items
+    
+    return render(request, 'manager/manager_list.html', context=context)
 
 
 def add_item(request):
