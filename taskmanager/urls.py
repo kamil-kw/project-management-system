@@ -29,9 +29,11 @@ urlpatterns = [
     path('toggle/<item_id>', views.toggle_item, name='toggle'),
     path('delete/<item_id>', views.delete_item, name='delete'),
     path('accounts/', include('allauth.urls')),
-    
+
     path('projects/', views.ProjectView.as_view(), name='projects'),
     path('add_project/', views.AddProject.as_view(), name='add_project'),
-    path('update_project/<pk>', views.ProjectUpdateView.as_view(), name='update_project'),
-    path('delete_project/<pk>', views.ProjectDeleteView.as_view(), name='delete_project'),
+    path('update_project/<pk>', views.ProjectUpdateView.as_view(),
+         name='update_project'),
+    path('delete_project/<pk>', views.ProjectDeleteView.as_view(),
+         name='delete_project'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
