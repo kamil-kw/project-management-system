@@ -14,7 +14,7 @@
                         <summary>Filter data</summary>
                         <div class="table-cell card card-group bg-dark">
                             <form class="search" method="get">
-                                {{ myFilter.form.as_p }}
+                                {{ my_filter.form.as_p }}
 
                                 <button class="btn btn-primary" type="submit">
                                     Search
@@ -40,7 +40,7 @@
                 <th>Delete</th>
             </tr>
         </thead>
-        {% for item in pageItems %}
+        {% for item in page_items %}
         <tr>
             <tbody>
                 {% if item.done %}
@@ -84,23 +84,23 @@
 </div>
 <div class="row">
     <div class="col">
-        {% if pageItems.has_previous %}
+        {% if page_items.has_previous %}
         <a href="?page=1"><button type="button" class="btn btn-primary">&laquo First</button></a>
-        <a href="?page={{ pageItems.previous_page_number }}"><button type="button"
+        <a href="?page={{ page_items.previous_page_number }}"><button type="button"
                 class="btn btn-primary">Previous</button></a>
         {% endif %}
 
-        {% if pageItems.has_next %}
+        {% if page_items.has_next %}
 
         <div class="col pagination-btnS">
-        <a href="?page=={{ pageItems.next_page_number }}"><button type="button" class="btn btn-primary">Next</button></a>
-        <a href="?page={{ pageItems.paginator.num_pages }}"><button type="button" class="btn btn-primary">Last
+        <a href="?page=={{ page_items.next_page_number }}"><button type="button" class="btn btn-primary">Next</button></a>
+        <a href="?page={{ page_items.paginator.num_pages }}"><button type="button" class="btn btn-primary">Last
                 &raquo</button></a>
         {% endif %}
         </div>
     </div>
     <div class="col">
-        <p class="page-num">Page {{ pageItems.number }} of {{ pageItems.paginator.num_pages }}</p>
+        <p class="page-num">Page {{ page_items.number }} of {{ page_items.paginator.num_pages }}</p>
     </div>
     <div class="col">
     <a type="button" class="btn btn-warning col add-btn" href="/add">Add an Item</a>
