@@ -63,3 +63,62 @@ html > body {
   .add-btn {
     float: right;
   }
+
+  .row > table {
+    width: 90vw;
+  }
+
+  form {
+    padding-left: 13vw;
+    padding-right: 23vw;
+    width: 83vw;
+  }
+
+  details.btn.btn-primary {
+    width: -webkit-fill-available;
+}
+
+
+
+  // Extra small devices (portrait phones, less than 576px)
+  // No media query for `xs` since this is the default in Bootstrap
+  @media (max-width: 575px) {
+
+    form > .search {
+      padding-left: 1vw;
+      padding-right: 1vw;
+    }
+
+   }
+
+   .search > button {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-left: 10vw;
+   }
+
+   div > table {
+     width: 90vw;
+
+   }
+
+
+  
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) { ... }
+  
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) { ... }
+  
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+
+  }
+  
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) { 
+    
+    .row > table {
+      width: 90vw;
+    }
+   }
