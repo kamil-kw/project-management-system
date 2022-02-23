@@ -1,17 +1,26 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, CreateView, DeleteView, UpdateView
+from django.urls import reverse_lazy
+from django.core.paginator import Paginator
 from .models import Item, Project
+
 from .forms import ItemForm
+from .filters import DueDateFilter
 
 
-# Create your views here.
-""" using classes"""
+# Create your views here. """ using classes"""
 
 class HomeView(ListView):
     """[add home view template]"""
-    model = ItemForm
+    model = Item
     template_name = 'manager/manager_list.html'
+    ordering = ['due_date']
 
+
+class ProjectView(ListView):
+    """[project view template]"""
+    model = Project
+    template_name = 'manager/projects.html'
 
 
 class AddProject(CreateView):
@@ -19,13 +28,38 @@ class AddProject(CreateView):
     model = Project
     template_name = 'manager/add_project.html'
     fields = '__all__'
+    
+
+class ProjectUpdateView(UpdateView):
+    """ add project function """
+    model = Project
+    template_name = 'manager/update_project.html'
+    fields = '__all__'
+
+
+class ProjectDeleteView(DeleteView):
+    """ add project function """
+    model = Project
+    template_name = 'manager/delete_project.html'
+    success_url = reverse_lazy('get_manager_list')
 
 
 def get_manager_list(request):
     """ manager list """
-    items = Item.objects.all()
+    items = Item.objects.all().order_by('due_date')
+    
+    p = Paginator(Item.objects.all().order_by('due_date'), 7)
+    page = request.GET.get('page')
+    pageItems = p.get_page(page)
+    
+    myFilter = DueDateFilter(request.GET, queryset=items)
+    items = myFilter.qs
+
     context = {
-        'items': items
+        'items': items,
+        'myFilter': myFilter,
+        'pageItems': pageItems,
+
     }
     return render(request, 'manager/manager_list.html', context)
 

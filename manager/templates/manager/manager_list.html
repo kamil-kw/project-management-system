@@ -1,70 +1,122 @@
-{% extends 'manager/base.html' %}
+{% extends 'base.html' %}
 
 
 {% block content %}
 <!-- Content Goes here -->
 {% if user.is_authenticated %}
-<h2>Task List</h2>
-<table>
-    <thead>
-        <tr>
-            <th>Project</th>
-            <th>Task</th>
-            <th>Owner</th>
-            <th>Due date</th>
-            <th>Status</th>
-            <th>Edit</th>
-            <th>Toggle</th>
-            <th>Delete</th>
-        </tr>
-    </thead>
-    {% for item in items %}
-    <tbody>
-        <tr>
-            {% if item.done %}
-            <td><strike>{{ item.project }}</strike></td>
-            <td><strike>{{ item.task }}</strike></td>
-            <td><strike>{{ item.owner }}</strike></td>
-            <td><strike>{{ item.due_date }}</strike></td>
-            <td><strike>Closed</strike></td>
-            {% else %}
-            <td>{{ item.project }}</td>
-            <td>{{ item.task }}</td>
-            <td>{{ item.owner }}</td>
-            <td>{{ item.due_date }}</td>
-            <td>Open</td>
-            {% endif %}
-            <td>
-                <a href="/edit/{{ item.id }}">
-                    <button>Edit</button>
+<h2 class="center">Task List</h2>
 
-                </a>
-            </td>
-            <td>
-                <a href="/toggle/{{ item.id }}">
-                    <button>Toggle</button>
+        
+            
+            <div class="row">
+                <div class="col">
+                    <details>
+                        <summary>Filter data</summary>
+                        <div class="table-cell card card-group bg-dark">
+                            <form class="search" method="get">
+                                {{ myFilter.form.as_p }}
 
-                </a>
-            </td>
-            <td>
-                <a href="/delete/{{ item.id }}">
-                    <button>Delete</button>
-                </a>
-            </td>
+                                <button class="btn btn-primary" type="submit">
+                                    Search
+                                </button>
+                            </form>
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+        
+<div class="table-area">
+    <table class="table table-dark table-striped table-sm">
+        <thead>
+            <tr class="table-primary">
+                <th>Project</th>
+                <th>Task</th>
+                <th>Owner</th>
+                <th>Due date</th>
+                <th>Status</th>
+                <th>Edit</th>
+                <th>Toggle</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        {% for item in pageItems %}
+        <tr>
+            <tbody>
+                {% if item.done %}
+                <td><strike>{{ item.project }}</strike></td>
+                <td><strike>{{ item.task }}</strike></td>
+                <td><strike>{{ item.owner }}</strike></td>
+                <td><strike>{{ item.due_date|date:"D d M Y"}}</strike></td>
+                <td><strike>Closed</strike></td>
+                {% else %}
+                <td>{{ item.project }}</td>
+                <td>{{ item.task }}</td>
+                <td>{{ item.owner }}</td>
+                <td>{{ item.due_date|date:"D d M Y" }}</td>
+                <td>Open</td>
+                {% endif %}
+                <td>
+                    <a href="/edit/{{ item.id }}">
+                        <button type="button" class="btn btn-primary">Edit</button>
+
+                    </a>
+                </td>
+                <td>
+                    <a href="/toggle/{{ item.id }}">
+                        <button type="button" class="btn btn-success">Toggle</button>
+
+                    </a>
+                </td>
+                <td>
+                    <a href="/delete/{{ item.id }}">
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </a>
+                </td>
         </tr>
         {% empty %}
         <tr>
             <td>All task completed.</td>
         </tr>
-    </tbody>
-    {% endfor %}
-</table>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="row">
+    <div class="col">
+        {% if pageItems.has_previous %}
+        <a href="?page=1"><button type="button" class="btn btn-primary">&laquo First</button></a>
+        <a href="?page={{ pageItems.previous_page_number }}"><button type="button"
+                class="btn btn-primary">Previous</button></a>
+        {% endif %}
 
-<a href="/add">Add an Item</a>
-{% else %}
+        {% if pageItems.has_next %}
 
-<p>Please <a class="button" href="{% url 'account_login' %}">Login</a> or <a class="button" href="{% url 'account_signup' %}">Register</a></p>
+        <div class="col pagination-btnS">
+        <a href="?page=={{ pageItems.next_page_number }}"><button type="button" class="btn btn-primary">Next</button></a>
+        <a href="?page={{ pageItems.paginator.num_pages }}"><button type="button" class="btn btn-primary">Last
+                &raquo</button></a>
+        {% endif %}
+        </div>
+    </div>
+    <div class="col">
+        <p class="page-num">Page {{ pageItems.number }} of {{ pageItems.paginator.num_pages }}</p>
+    </div>
+    <div class="col">
+    <a type="button" class="btn btn-warning col add-btn" href="/add">Add an Item</a>
+    </div>
+</div>
+
+
+    {% else %}
+    <div class="align-content-center flex-wrap">
+        <h3 class="col">Welcome in the Project Management System</h3>
+
+        <p class="col">This is the place where your journey begin,
+            so please <a class="button" href="{% url 'account_login' %}">Login</a> if you are a user or <a
+                class="button" href="{% url 'account_signup' %}">Register</a> yourself
+            to receive an access to this page</p>
+    </div>
 
 {% endif %}
-
 {% endblock content %}

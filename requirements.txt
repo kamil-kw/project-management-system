@@ -7,6 +7,7 @@ dj3-cloudinary-storage==0.0.6
 Django==3.2
 django-allauth==0.48.0
 django-bootstrap-datepicker-plus==4.0.0
+django-filter==21.1
 gunicorn==20.1.0
 oauthlib==3.2.0
 psycopg2==2.9.3
