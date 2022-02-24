@@ -95,6 +95,7 @@ def toggle_item(request, item_id):
 def delete_item(request, item_id):
     """ delete items """
     item = get_object_or_404(Item, id=item_id)
+
     item.delete()
     return redirect('get_manager_list')
 

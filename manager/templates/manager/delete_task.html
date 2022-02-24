@@ -8,6 +8,10 @@
 
     <p>Are you sure you want to delete "{{ object }}"?</p>
 
-    <button type="submit" value="Confirm">
+</div>
+<p>
+    <a class="btn btn-primary" href="{% url 'delete_task' %}">Delete task</a>
+</p>
+</div>
 </form>
 {% endblock content %}

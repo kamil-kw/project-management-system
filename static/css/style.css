@@ -68,7 +68,7 @@ details {
 }
 
 p {
-  height: 7vh;
+  height: 4vh;
   text-align: -webkit-center;
 }
 
@@ -120,9 +120,6 @@ form.search {
   margin-right: 18vw;
 }
 
-#task {
-  height: 6vw;
-}
 
 /* Small devices (landscape phones, 576px and up) */
 @media only screen and (min-width: 576px) {
@@ -146,13 +143,18 @@ form.search {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .action_field {
+  .action_field, form.search, summary {
   font-size: larger;
   }
 
   .signup-btn {
     margin-top: 0vw;
     margin-bottom: 0vw;
+  }
+
+  form.search {
+    margin-left: 20vw;
+    margin-right: 18vw;
   }
 
 }

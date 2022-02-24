@@ -26,4 +26,6 @@ class Item(models.Model):
     due_date = models.DateField(null=False)
     done = models.BooleanField(null=False, blank=False, default=False)
 
-
+    def __str__(self):
+        """[class objects as a string]"""
+        return self.task
