@@ -7,7 +7,7 @@
 
     <h2 class="center">Project List</h2>
     {% csrf_token %}
-    <div class="table-area">
+    <div class="table-responsive-md">
         <table class="table table-dark table-striped table-sm">
             <thead>
             <tr class="table-primary">
@@ -28,11 +28,6 @@
                 <td>
                     <a href="/delete_project/{{ project.id }}">
                         <button type="button" class="btn btn-danger">Delete</button>
-                    </a>
-                </td>
-                <td>
-                    <a href="/open_project/{{ project.id }}">
-                        <button type="button" class="btn btn-danger">See all tasks</button>
                     </a>
                 </td>
             </tr>

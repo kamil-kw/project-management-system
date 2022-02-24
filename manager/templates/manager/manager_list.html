@@ -4,9 +4,10 @@
 {% block content %}
 <!-- Content Goes here -->
 {% if user.is_authenticated %}
-<h2 class="center">Task List</h2>
-
-            
+{% csrf_token %}
+<!-- Task list section -->
+<h2 class="center">Task List</h2>     
+    <!-- Task filter -->
     <div class="row">
         <div class="col">
             <details class="btn btn-primary">
@@ -23,7 +24,7 @@
             </details>
         </div>
     </div>
-        
+<!-- Task list -->
 <div class="table-responsive-md">
     <table class="table table-dark table-striped table-sm">
         <thead>
@@ -80,6 +81,7 @@
         </tbody>
     </table>
 </div>
+<!-- Pagination -->
 <div class="row">
     <div class="col">
         {% if page_items.has_previous %}

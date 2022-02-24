@@ -68,12 +68,6 @@ html > body {
     width: 90vw;
   }
 
-  form {
-    padding-left: 13vw;
-    padding-right: 23vw;
-    width: 83vw;
-  }
-
   details.btn.btn-primary {
     width: -webkit-fill-available;
 }
