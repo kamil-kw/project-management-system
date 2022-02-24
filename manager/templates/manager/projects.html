@@ -2,39 +2,33 @@
 
 
 {% block content %}
-<h2>See project list:</h2>
 <form method="POST" enctype="multipart/form-data" action="{% url 'projects' %}">
 
     <h2 class="center">Project List</h2>
     {% csrf_token %}
-    <div class="table-area">
-        <table class="table table-dark table-striped table-sm">
+    <div class="table-responsive-md">
+        <table class="table table-dark table-striped table-sm align-middle">
             <thead>
-            <tr class="table-primary">
-                <th>Project</th>
-                <th>Update Project Details</th>
-                <th>Delete Project</th>
-            </tr>
+                <tr class="table-primary">
+                    <th class="center">Project</th>
+                    <th class="center">Update Project Details</th>
+                    <th class="center">Delete Project</th>
+                </tr>
             </thead>
             {% for project in project_list %}
             <tr>
                 <tbody>
-                <td>{{ project }}</td>
-                <td>
-                    <a href="/update_project/{{ project.id }}">
-                        <button type="button" class="btn btn-primary">Update</button>
-                    </a>
-                </td>
-                <td>
-                    <a href="/delete_project/{{ project.id }}">
-                        <button type="button" class="btn btn-danger">Delete</button>
-                    </a>
-                </td>
-                <td>
-                    <a href="/open_project/{{ project.id }}">
-                        <button type="button" class="btn btn-danger">See all tasks</button>
-                    </a>
-                </td>
+                    <td>{{ project }}</td>
+                    <td class="center">
+                        <a href="/update_project/{{ project.id }}">
+                            <button type="button" class="btn btn-primary">Update</button>
+                        </a>
+                    </td>
+                    <td class="center">
+                        <a href="/delete_project/{{ project.id }}">
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </a>
+                    </td>
             </tr>
             {% empty %}
             <tr>

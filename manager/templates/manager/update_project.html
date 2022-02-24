@@ -4,8 +4,8 @@
 {% block content %}
 <h2>Update Project:</h2>
 <form method="POST">
-    {% csrf_token %} 
+    {% csrf_token %}
     {{ form.as_p }}
-        <input type="submit" value="Update">
-    </form>
+    <input type="submit" value="Update">
+</form>
 {% endblock content %}

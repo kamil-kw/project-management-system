@@ -2,15 +2,21 @@
 
 
 {% block content %}
-<h2>Add project to the project list:</h2>
-<form method="POST" enctype="multipart/form-data" action="{% url 'add_project' %}">
+<div class="row action_field">
+    <div class="col">
 
-    {% csrf_token %}
-    {{ form.as_p }}
-    <div>
-        <p>
-            <button type="submit">Add Project</button>
-        </p>
+        <h2>Add project to the project list:</h2>
+        <form method="POST" enctype="multipart/form-data" action="{% url 'add_project' %}">
+
+            {% csrf_token %}
+            {{ form.as_p }}
+            <br>
+            <div>
+                <p>
+                    <button type="submit">Add Project</button>
+                </p>
+            </div>
+        </form>
     </div>
-</form>
+</div>
 {% endblock content %}

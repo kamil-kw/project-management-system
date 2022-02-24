@@ -2,123 +2,141 @@
 /* font-family: 'Merienda', cursive;
 font-family: 'Montserrat', sans-serif; */
 
-html > body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    background-color: var(--bs-gray-900);
-    font: 1rem/1.5 var(--bs-font-sans-serif);
-  }
-  
-  main {
-    flex: 1 0 auto;
+html>body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: var(--bs-gray-900);
+  font: 1rem/1.5 var(--bs-font-sans-serif);
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.nav-font {
+  font-family: 'Merienda', cursive;
+  font-weight: 800;
+}
+
+.center {
+  text-align: center;
+}
+
+label {
+  color: aliceblue;
+  float: left;
+  padding-right: 20vw;
+}
+
+select,
+input {
+  float: right;
+  width: 30vw;
+}
+
+.site {
+  background-color: brown;
+}
+
+.footer-font {
+  font-family: 'Merienda', cursive;
+  font-weight: 800;
+  color: aliceblue;
+}
+
+footer {
+
+  bottom: 0;
+  height: auto;
+  width: 100vw;
+}
+
+h2,
+h3,
+p,
+details {
+  color: aliceblue;
+}
+
+p {
+  height: 4vh;
+}
+
+.page-num {
+  color: aliceblue;
+  text-align: center;
+}
+
+
+input#id_name {
+  width: auto;
+}
+
+.add-btn {
+  float: right;
+}
+
+.row>table {
+  width: 90vw;
+}
+
+
+.action_field {
+  padding-left: 20vw;
+  padding-right: 20vw;
+}
+
+details.btn.btn-primary {
+  width: -webkit-fill-available;
+}
+
+div>table {
+  font-size: small;
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+@media (max-width: 575px) {
+
+  form>.search {
+    padding-left: 1vw;
+    padding-right: 1vw;
   }
 
-  .nav-font {
-    font-family: 'Merienda', cursive;
-    font-weight: 800;
-  }
+}
 
-  .center {
-    text-align: center;
-  }
 
-  label {
-    color: aliceblue;
-  }
+div>table {
+  width: 90vw;
+  font-size: small;
 
-  .site {
-    background-color: brown;
-  }
-
-  .footer-font {
-    font-family: 'Merienda', cursive;
-    font-weight: 800;
-    color: aliceblue;
-  }
-
-  footer {
-    
-    bottom: 0;
-    height: auto;
-    width: 100vw;
-  }
-
-  h2, h3, p, details  {
-    color: aliceblue;
-  }
-
-  .page-num {
-    color: aliceblue;
-    text-align: center;
-  }
-
-  .search > p > input, select {
-    position: relative;
-    left: 10vw;
-    float: right;
-    width: 27vw;
-  }
-
-  .add-btn {
-    float: right;
-  }
-
-  .row > table {
-    width: 90vw;
-  }
-
-  form {
-    padding-left: 13vw;
-    padding-right: 23vw;
-    width: 83vw;
-  }
-
-  details.btn.btn-primary {
-    width: -webkit-fill-available;
 }
 
 
 
-  // Extra small devices (portrait phones, less than 576px)
-  // No media query for `xs` since this is the default in Bootstrap
-  @media (max-width: 575px) {
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (min-width: 576px) {
 
-    form > .search {
-      padding-left: 1vw;
-      padding-right: 1vw;
-    }
-
-   }
-
-   .search > button {
-    padding-left: 1vw;
-    padding-right: 1vw;
-    margin-left: 10vw;
-   }
-
-   div > table {
-     width: 90vw;
-
-   }
-
-
-  
-  // Small devices (landscape phones, 576px and up)
-  @media (min-width: 576px) { ... }
-  
-  // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) { ... }
-  
-  // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) {
-
+  div>table {
+    font-size: medium;
   }
-  
-  // Extra large devices (large desktops, 1200px and up)
-  @media (min-width: 1200px) { 
-    
-    .row > table {
-      width: 90vw;
-    }
-   }
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  ...
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+  .row>table {
+    width: 90vw;
+  }
+}

@@ -2,15 +2,19 @@
 
 
 {% block content %}
-<h2>Add task to the list:</h2>
-<form method="POST" enctype="multipart/form-data" action="{% url 'add' %}">
+<div class="row action_field">
+    <div class="col">
+        <h2>Add task to the list:</h2>
+        <form method="POST" enctype="multipart/form-data" action="{% url 'add' %}">
 
-    {% csrf_token %}
-    {{ form.as_p }}
-    <div>
-        <p>
-            <button type="submit">Add Item</button>
-        </p>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div>
+                <p>
+                    <button type="submit">Add Item</button>
+                </p>
+            </div>
+        </form>
     </div>
-</form>
+</div>
 {% endblock content %}
