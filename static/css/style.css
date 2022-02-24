@@ -68,7 +68,7 @@ details {
 }
 
 p {
-  height: 4vh;
+  height: 7vh;
   text-align: -webkit-center;
 }
 
@@ -108,6 +108,20 @@ div>table {
 .signup-btn {
   margin-top: 18vw;
   margin-bottom: 2vw
+}
+
+input#id_remember {
+  margin-top: 1vw;
+  width: auto;
+}
+
+form.search {
+  margin-left: 13vw;
+  margin-right: 18vw;
+}
+
+#task {
+  height: 6vw;
 }
 
 /* Small devices (landscape phones, 576px and up) */

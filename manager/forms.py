@@ -24,7 +24,7 @@ class ItemForm(forms.ModelForm):
         fields = ['project', 'task', 'owner', 'due_date', 'done'] 
         widgets = {
             'due_date': DateInput(attrs={'class': 'form-control'}),
-            'task': forms.Textarea(attrs={'class': 'form-control'}),
+            'task': forms.TextInput(attrs={'class': 'form-control'}),
             'owner': forms.TextInput(attrs={'class': 'form-control'}),
             'project': forms.Select(choices=ProjectChoices.project_list,
                                     attrs={'class': 'form-control'}),
