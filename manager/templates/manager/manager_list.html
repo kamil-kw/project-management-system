@@ -6,27 +6,29 @@
 {% if user.is_authenticated %}
 {% csrf_token %}
 <!-- Task list section -->
-<h2 class="center">Task List</h2>     
-    <!-- Task filter -->
+<h2 class="center">Task List</h2>
+<!-- Task filter -->
+<details class="btn btn-primary">
+    <summary>Filter data</summary>
     <div class="row">
         <div class="col">
-            <details class="btn btn-primary">
-                <summary>Filter data</summary>
-                <div class="table-cell card card-group bg-dark">
-                    <form class="search" method="get">
-                        {{ my_filter.form.as_p }}
 
-                        <button class="btn btn-primary" type="submit">
-                            Search
-                        </button>
-                    </form>
-                </div>
-            </details>
+            <div class="table-cell card card-group bg-dark">
+                <form class="search" method="get">
+                    {{ my_filter.form.as_p }}
+
+                    <button class="btn btn-primary" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+
         </div>
     </div>
+</details>
 <!-- Task list -->
 <div class="table-responsive-md">
-    <table class="table table-dark table-striped table-sm">
+    <table class="table table-dark table-striped table-sm align-middle">
         <thead>
             <tr class="table-primary">
                 <th>Project</th>
@@ -34,9 +36,9 @@
                 <th>Owner</th>
                 <th>Due date</th>
                 <th>Status</th>
-                <th>Edit</th>
-                <th>Toggle</th>
-                <th>Delete</th>
+                <th class="center">Edit</th>
+                <th class="center">Toggle</th>
+                <th class="center">Delete</th>
             </tr>
         </thead>
         {% for item in page_items %}
@@ -55,19 +57,19 @@
                 <td>{{ item.due_date|date:"D d M Y" }}</td>
                 <td>Open</td>
                 {% endif %}
-                <td>
+                <td class="center">
                     <a href="/edit/{{ item.id }}">
                         <button type="button" class="btn btn-primary">Edit</button>
 
                     </a>
                 </td>
-                <td>
+                <td class="center">
                     <a href="/toggle/{{ item.id }}">
                         <button type="button" class="btn btn-success">Toggle</button>
 
                     </a>
                 </td>
-                <td>
+                <td class="center">
                     <a href="/delete/{{ item.id }}">
                         <button type="button" class="btn btn-danger">Delete</button>
                     </a>
@@ -93,30 +95,31 @@
         {% if page_items.has_next %}
 
         <div class="col pagination-btnS">
-        <a href="?page=={{ page_items.next_page_number }}"><button type="button" class="btn btn-primary">Next</button></a>
-        <a href="?page={{ page_items.paginator.num_pages }}"><button type="button" class="btn btn-primary">Last
-                &raquo</button></a>
-        {% endif %}
+            <a href="?page=={{ page_items.next_page_number }}"><button type="button"
+                    class="btn btn-primary">Next</button></a>
+            <a href="?page={{ page_items.paginator.num_pages }}"><button type="button" class="btn btn-primary">Last
+                    &raquo</button></a>
+            {% endif %}
         </div>
     </div>
     <div class="col">
         <p class="page-num">Page {{ page_items.number }} of {{ page_items.paginator.num_pages }}</p>
     </div>
     <div class="col">
-    <a type="button" class="btn btn-warning col add-btn" href="/add">Add an Item</a>
+        <a type="button" class="btn btn-warning col add-btn" href="/add">Add an Item</a>
     </div>
 </div>
 
 
-    {% else %}
-    <div class="align-content-center flex-wrap">
-        <h3 class="col">Welcome in the Project Management System</h3>
+{% else %}
+<div class="align-content-center flex-wrap">
+    <h3 class="col">Welcome in the Project Management System</h3>
 
-        <p class="col">This is the place where your journey begin,
-            so please <a class="button" href="{% url 'account_login' %}">Login</a> if you are a user or <a
-                class="button" href="{% url 'account_signup' %}">Register</a> yourself
-            to receive an access to this page</p>
-    </div>
+    <p class="col">This is the place where your journey begin,
+        so please <a class="button" href="{% url 'account_login' %}">Login</a> if you are a user or <a class="button"
+            href="{% url 'account_signup' %}">Register</a> yourself
+        to receive an access to this page</p>
+</div>
 
 {% endif %}
 {% endblock content %}
