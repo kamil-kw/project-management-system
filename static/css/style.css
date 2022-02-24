@@ -23,16 +23,24 @@ main {
   text-align: center;
 }
 
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
 label {
   color: aliceblue;
   float: left;
-  padding-right: 20vw;
+  padding-right: 7vw;
 }
 
 select,
 input {
-  float: right;
-  width: 30vw;
+  float: left;
+  width: 55vw;
 }
 
 .site {
@@ -61,6 +69,7 @@ details {
 
 p {
   height: 4vh;
+  text-align: -webkit-center;
 }
 
 .page-num {
@@ -96,38 +105,42 @@ div>table {
 }
 
 
-// Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
-@media (max-width: 575px) {
-
-  form>.search {
-    padding-left: 1vw;
-    padding-right: 1vw;
-  }
-
+.signup-btn {
+  margin-top: 18vw;
+  margin-bottom: 2vw
 }
-
-
-div>table {
-  width: 90vw;
-  font-size: small;
-
-}
-
-
 
 /* Small devices (landscape phones, 576px and up) */
 @media only screen and (min-width: 576px) {
 
-  div>table {
-    font-size: medium;
+  label {
+    padding-right: 3vw;
   }
+
+  input#id_name {
+    width: auto;
+  }
+
+  select,
+  input {
+    float: right;
+    width: 30vw;
+  }
+  
 
 }
 
-// Medium devices (tablets, 768px and up)
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  ...
+  .action_field {
+  font-size: larger;
+  }
+
+  .signup-btn {
+    margin-top: 0vw;
+    margin-bottom: 0vw;
+  }
+
 }
 
 // Large devices (desktops, 992px and up)
