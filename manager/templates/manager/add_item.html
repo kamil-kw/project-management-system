@@ -5,7 +5,7 @@
 <div class="row action_field">
     <div class="col">
         <h2>Add task to the list:</h2>
-        <form method="POST" enctype="multipart/form-data" action="{% url 'add' %}">
+        <form class="add_task" method="POST" enctype="multipart/form-data" action="{% url 'add' %}">
 
             {% csrf_token %}
             {{ form.as_p }}
