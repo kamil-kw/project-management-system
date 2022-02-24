@@ -2,10 +2,16 @@
 
 
 {% block content %}
+<div class="row action_field">
+    <div class="col">
 <h2>Update Project:</h2>
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <input class="btn btn-primary" type="submit" value="Update">
+    <div class="center">
+        <button class="btn btn-primary" type="submit">Update Project</button>
+    </div>
 </form>
+</div>
+</div>
 {% endblock content %}
