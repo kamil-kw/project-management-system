@@ -172,6 +172,10 @@ During creation journey I did use:
 
 ## **4.3 Function tests**
 
+### **Login Page wrong user or password**
+
+![Landing page menu](images/readme_images/testing/login_page_wrong_login.png)
+
 
 <a name="development"></a>
 
@@ -233,8 +237,6 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 ### **Login Page**
 
 ![Landing page menu](images/readme_images/testing/login_page.png)
-
-
 
 
 ### **User not authenticated Page Menu**
