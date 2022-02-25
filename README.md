@@ -130,7 +130,7 @@ During creation journey I did use:
     * Chrome dev tool used to debug and test code while building
 * [Github](http://github.com)
     * For storing project
-* [Gitppd]](https://gitpod.io/workspaces)
+* [Gitpod](https://gitpod.io/workspaces)
     * Code written in gitpod workspace
 * [W3School](https://www.w3schools.com/)
     * For problem solving and code searching

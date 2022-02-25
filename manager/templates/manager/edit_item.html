@@ -2,18 +2,22 @@
 
 
 {% block content %}
+<!-- Edint item -->
 <div class="row action_field center">
     <div class="col">
         <h2>Edit task form list:</h2>
+        <!-- form -->
         <form method="POST" enctype="multipart/form-data">
 
             {% csrf_token %}
             <div>
-            {{ form.as_p }}
+                {{ form.as_p }}
             </div>
+            <!-- spacing -->
             <br>
             <hr>
             <br>
+            <!-- button -->
             <div class="center">
                 <button class="btn btn-primary" type="submit">Edit Item</button>
             </div>

@@ -2,12 +2,15 @@
 
 
 {% block content %}
+<!-- Project list -->
 <form method="POST" enctype="multipart/form-data" action="{% url 'projects' %}">
 
     <h2 class="center">Project List</h2>
     {% csrf_token %}
     <div class="table-responsive-md">
+        <!-- table -->
         <table class="table table-dark table-striped table-sm align-middle">
+            <!-- tabke header -->
             <thead>
                 <tr class="table-primary">
                     <th class="center">Project</th>
@@ -17,6 +20,7 @@
             </thead>
             {% for project in project_list %}
             <tr>
+                <!-- table data -->
                 <tbody>
                     <td>{{ project }}</td>
                     <td class="center">
@@ -30,6 +34,7 @@
                         </a>
                     </td>
             </tr>
+            <!-- <if list empty -->
             {% empty %}
             <tr>
                 <td>Here is no project in the list.</td>
@@ -39,6 +44,7 @@
         </table>
 
 </form>
+<!-- add project button -->
 </div>
 <p>
     <a class="btn btn-primary" href="{% url 'add_project' %}">Add Project</a>

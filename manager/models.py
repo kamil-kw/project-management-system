@@ -8,7 +8,7 @@ from datetime import datetime, date
 class Project(models.Model):
     """ Projects list """
     name = models.CharField(max_length=300)
-    
+
     def __str__(self):
         """[class objects as a string]"""
         return self.name

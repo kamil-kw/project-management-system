@@ -2,14 +2,16 @@
 
 
 {% block content %}
+<!-- Add task field -->
 <div class="row action_field">
     <div class="col">
         <h2>Add task to the list:</h2>
         <form class="add_task" method="POST" enctype="multipart/form-data" action="{% url 'add' %}">
 
             {% csrf_token %}
+            <!-- form Add task -->
             <div>
-            {{ form.as_p }}
+                {{ form.as_p }}
             </div>
             <br>
             <div>

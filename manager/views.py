@@ -6,8 +6,8 @@ from .models import Item, Project
 from .forms import ItemForm
 from .filters import DueDateFilter
 
-
 # Create your views here. """ using classes"""
+
 
 class HomeView(ListView):
     """[add home view template]"""
@@ -27,7 +27,7 @@ class AddProject(CreateView):
     model = Project
     template_name = 'manager/add_project.html'
     fields = '__all__'
-    
+
 
 class ProjectUpdateView(UpdateView):
     """ add project function """
@@ -43,10 +43,14 @@ class ProjectDeleteView(DeleteView):
     success_url = reverse_lazy('get_manager_list')
 
 
+# Create your views here. """ using classes"""
+
+
 def get_manager_list(request):
     """ manager list view"""
     context = {}
-    my_filter = DueDateFilter(request.GET, queryset= Item.objects.all().order_by('due_date'), )
+    my_filter = DueDateFilter(request.GET,
+                              queryset=Item.objects.all().order_by('due_date'), )
     context['my_filter'] = my_filter
     paginated_filtered = Paginator(my_filter.qs, 7)
     page = request.GET.get('page')
@@ -98,4 +102,3 @@ def delete_item(request, item_id):
 
     item.delete()
     return redirect('get_manager_list')
-
