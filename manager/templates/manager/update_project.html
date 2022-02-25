@@ -2,17 +2,19 @@
 
 
 {% block content %}
+<!-- Update project form -->
 <div class="row action_field center">
     <div class="col">
-<h2>Update Project:</h2>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <br>
-    <div class="center">
-        <button class="btn btn-primary" type="submit">Update Project</button>
+        <h2>Update Project:</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <br>
+            <!-- update button -->
+            <div class="center">
+                <button class="btn btn-primary" type="submit">Update Project</button>
+            </div>
+        </form>
     </div>
-</form>
-</div>
 </div>
 {% endblock content %}

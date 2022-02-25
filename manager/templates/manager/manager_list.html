@@ -3,6 +3,7 @@
 
 {% block content %}
 <!-- Content Goes here -->
+<!-- if user authenticated  -->
 {% if user.is_authenticated %}
 {% csrf_token %}
 <!-- Task list section -->
@@ -75,9 +76,10 @@
                     </a>
                 </td>
         </tr>
+        <!-- if list empty -->
         {% empty %}
         <tr>
-            <td>All task completed.</td>
+            <td>No tasks</td>
         </tr>
         {% endfor %}
         </tbody>
@@ -86,12 +88,13 @@
 <!-- Pagination -->
 <div class="row">
     <div class="col">
+        <!-- Previous -->
         {% if page_items.has_previous %}
         <a href="?page=1"><button type="button" class="btn btn-primary">&laquo First</button></a>
         <a href="?page={{ page_items.previous_page_number }}"><button type="button"
                 class="btn btn-primary">Previous</button></a>
         {% endif %}
-
+        <!-- If has next -->
         {% if page_items.has_next %}
 
         <div class="col pagination-btnS">
@@ -102,25 +105,27 @@
             {% endif %}
         </div>
     </div>
+    <!-- pagination number -->
     <div class="col">
         <p class="page-num">Page {{ page_items.number }} of {{ page_items.paginator.num_pages }}</p>
     </div>
+    <!-- Add item button -->
     <div class="col">
         <a type="button" class="btn btn-warning col add-btn" href="/add">Add an Item</a>
     </div>
 </div>
 
-
+<!-- If not authenticated -->
 {% else %}
 <div class="row">
-<div class="align-content-center flex-wrap center">
-    <h3 class="col">Welcome in the Project Management System</h3>
-    <br>
-    <p class="col">This is the place where your journey begin,
-        so please <a class="button" href="{% url 'account_login' %}">Login</a> if you are a user or <a class="button"
-            href="{% url 'account_signup' %}">Register</a> yourself
-        to receive an access to this page</p>
-</div>
+    <div class="align-content-center flex-wrap center">
+        <h3 class="col">Welcome in the Project Management System</h3>
+        <br>
+        <p class="col">This is the place where your journey begin,
+            so please <a class="button" href="{% url 'account_login' %}">Login</a> if you are a user or <a
+                class="button" href="{% url 'account_signup' %}">Register</a> yourself
+            to receive an access to this page</p>
+    </div>
 </div>
 {% endif %}
 {% endblock content %}

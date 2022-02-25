@@ -54,7 +54,7 @@ INSTALLED_APPS = [
 
     # main app
     'manager',
-    
+
     # Django filters
     'django_filters',
 ]

@@ -2,6 +2,7 @@
 
 
 {% block content %}
+<!-- Add Project Area -->
 <div class="row action_field">
     <div class="col center">
 
@@ -9,6 +10,7 @@
         <form method="POST" enctype="multipart/form-data" action="{% url 'add_project' %}">
 
             {% csrf_token %}
+            <!-- form for adding project -->
             {{ form.as_p }}
             <br>
             <div>

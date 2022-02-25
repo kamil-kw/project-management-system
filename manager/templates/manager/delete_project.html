@@ -1,18 +1,20 @@
-{% extends 'base.html' %}
+{%extends 'base.html' %}
 
 
 {% block content %}
+<!-- Delete Project confirmation -->
 <div class="row action_field">
     <div class="col center">
-<h2>Delete project form list:</h2>
-<form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
+        <h2>Delete project form list:</h2>
+        <!-- form -->
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
 
-    <p>Are you sure you want to delete "{{ object }}"?</p>
+            <p>Are you sure you want to delete "{{ object }}"?</p>
 
 
-    <button class="btn btn-danger" type="submit">Confirm</button>
-</form>
-</div>
+            <button class="btn btn-danger" type="submit">Confirm</button>
+        </form>
+    </div>
 </div>
 {% endblock content %}
