@@ -177,6 +177,14 @@ During creation journey I did use:
 
 ![Login Page email exist](images/readme_images/testing/register_user_mail_exist.png)
 
+### **Sign up Page user exist**
+
+![Sign up Page user exist](images/readme_images/testing/register_user_exist.png)
+
+### **Sign up Page password too short**
+
+![Sign up Page password too short](images/readme_images/testing/register_password_short.png)
+
 
 [Back to Table Of Content](#tableOfContents)
 
@@ -257,6 +265,10 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 ### **User not authenticated Page Menu**
 
 ![User not authenticated Page Menu](images/readme_images/testing/landing_page_menu.png)
+
+### **User authenticated Home Page Menu**
+
+![User authenticated Home Page Menu](images/readme_images/testing/home_page_menu.png)
 
 ### **User not authenticated Page Menu**
 
