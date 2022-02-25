@@ -226,9 +226,17 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 
 ## **End Product screens**
 
-![Hero image]()
+### **Landing Page**
+
+![Landing page](images/readme_images/testing/welcome_page.png)
+
+### **Landing Page Menu**
+
+![Landing page menu](images/readme_images/testing/landing_page_menu.png)
+
 
 [See testing photos](#functionTest) for more end product photo.
+
 
 [Back to Table Of Content](#tableOfContents)
 
@@ -247,11 +255,11 @@ During development I did face multiple bugs:
 
 Error
 
-![301 redirect Error](images/readme_images/E1_301redirect_Error.png)
+![301 redirect Error](images/readme_images/bugs/E1_301redirect_Error.png)
 
 Fix 
 
-![301 redirect Error](images/readme_images/E1_solution_True.png)
+![301 redirect Error](images/readme_images/bugs/E1_solution_True.png)
 
    
 * Issue with page rendering (Ger)
@@ -259,7 +267,7 @@ Fix
 
 Fix
 
-![301 redirect Error](images/readme_images/E3_jinja_url.png)
+![301 redirect Error](images/readme_images/bugs/E3_jinja_url.png)
 
 * Extending base.html template to allauth html files
     * Issue with a file structure and which was not able to pull details from base.html
@@ -268,24 +276,27 @@ Fix
 
 Moved the base.html to a main templates folder
 
-![301 redirect Error](images/readme_images/E4_location.png)
+![301 redirect Error](images/readme_images/bugs/E4_location.png)
 
 Updated the other templates accordingly
 
-![301 redirect Error](images/readme_images/E4_template.png)
+![301 redirect Error](images/readme_images/bugs/E4_template.png)
 
 * Templates DIR typo
     * used DRI insted of DIR
 
-![301 redirect Error](images/readme_images/E5_DIR_typo.png)
+Fix
 
+![301 redirect Error](images/readme_images/bugs/E5_DIR_typo.png)
 
 * Display CSS setting in the Heroku deployed version (Alan, John)
     * Issue related with not using a correct folders structure, link to the static files was incorectly writen
 
 * Link to style sheet shoul be in the < head >
 
-![301 redirect Error](images/readme_images/E6_link_to_css.png)
+Fix
+
+![301 redirect Error](images/readme_images/bugs/E6_link_to_css.png)
 
 * Setting.py, setting debug to:
 
@@ -306,9 +317,17 @@ urlpatterns = [
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
+* Conflict between filter and paginations 
+    * caused by using same queryset – fixed by separating queries
+
+Fix
+
+![301 redirect Error](images/readme_images/bugs/E7_queryset.png)
+
+
 <a name="remainBugs"></a>
    
-No remainig bugs
+Delay with updating project list - no solutions provided
 
 ## **8.2 Remaining Bugs**
 
