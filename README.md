@@ -280,8 +280,11 @@ During creation journey I did use:
 
 ## **4.3 Function tests**
 
+Due to time constrains not the full automatic test wasen't caompleted
 
+### **Automatic Test**
 
+![Automatic Test](images/readme_images/testing/test_automatic.png)
 
 
 [Back to Table Of Content](#tableOfContents)
