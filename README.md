@@ -191,6 +191,58 @@ During creation journey I did use:
 
 ![Login Page wrong user or password](images/readme_images/testing/login_page_wrong_login.png)
 
+![Project List](images/readme_images/testing/project_list.png)
+
+### **Project List**
+<hr>
+
+### **Add Project**
+
+![Add Project](images/readme_images/testing/add_project.png)
+
+### **Update Project**
+
+![Update Project](images/readme_images/testing/update_project.png)
+
+### **Delete Project**
+
+![Delete Project](images/readme_images/testing/delete_project.png)
+
+### **Task List**
+<hr>
+
+### **Toggle button**
+
+![Login Page wrong user or password](images/readme_images/testing/toggle_task.png)
+
+### **Edit Task**
+
+![Edit Task](images/readme_images/testing/edit_task.png)
+
+### **Pagination**
+
+![Edit Task](images/readme_images/testing/pagination_page_1.png)
+
+![Edit Task](images/readme_images/testing/pagination_page_2.png)
+
+### **Filter Area**
+<hr>
+
+### **Done dropdown**
+
+![Edit Task](images/readme_images/testing/filter_dropdown.png)
+
+### **Project Filter**
+
+![Project Filter](images/readme_images/testing/filter_project.png)
+
+### **Date Range Filter**
+
+![Date Range Filter](images/readme_images/testing/filter_date_range.png)
+
+### **Owner Filter**
+
+![Date Range Filter](images/readme_images/testing/filter_owner.png)
 
 
 [Back to Table Of Content](#tableOfContents)
@@ -285,10 +337,6 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 
 ![User authenticated Home Page Menu](images/readme_images/testing/home_page_menu.png)
 
-### **Home Page**
-<hr>
-
-![Home Page](images/readme_images/testing/home_page.png)
 
 ### **Project List**
 <hr>
@@ -309,6 +357,18 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 <hr>
 
 ![Delete Project](images/readme_images/testing/delete_project.png)
+
+### **Home Page**
+<hr>
+
+![Home Page](images/readme_images/testing/home_page.png)
+
+### **Edit Task**
+<hr>
+
+![Edit Task](images/readme_images/testing/edit_task.png)
+
+
 
 [See testing photos](#functionTest) for more end product photo.
 
