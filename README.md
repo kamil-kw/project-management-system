@@ -165,13 +165,11 @@ During creation journey I did use:
 
 ## **4.2 Manual testing**
 
+### **Sign Up test**
+
 ### **Sign up Page wrong user or password**
 
 ![Landing page menu](images/readme_images/testing/signup_wrong_password.png)
-
-### **Login Page wrong user or password**
-
-![Login Page wrong user or password](images/readme_images/testing/login_page_wrong_login.png)
 
 ### **Sign up Page email exist**
 
@@ -185,6 +183,11 @@ During creation journey I did use:
 
 ![Sign up Page password too short](images/readme_images/testing/register_password_short.png)
 
+### **Login test**
+
+### **Login Page wrong user or password**
+
+![Login Page wrong user or password](images/readme_images/testing/login_page_wrong_login.png)
 
 [Back to Table Of Content](#tableOfContents)
 
@@ -255,7 +258,7 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 
 ### **Sign up page**
 
-![Sign up page](templates/account/signup.html)
+![Sign up page](images/readme_images/testing/signup.png)
 
 ### **Login Page**
 
@@ -270,10 +273,14 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 
 ![User authenticated Home Page Menu](images/readme_images/testing/home_page_menu.png)
 
-### **User not authenticated Page Menu**
 
-![User not authenticated Page Menu](images/readme_images/testing/landing_page_menu.png)
+### **Home Page**
 
+![Home Page](images/readme_images/testing/home_page.png)
+
+### **Add Project**
+
+![Add Project](images/readme_images/testing/add_project.png)
 
 [See testing photos](#functionTest) for more end product photo.
 
