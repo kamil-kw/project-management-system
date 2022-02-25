@@ -1,4 +1,5 @@
-![Hero image](images_readme/hero_image.PNG)
+![Hero image](images/readme_images/hero_responsive.png)
+
 # ✔️ Project Management System 📔
 
 ## [See Live web](https://project-task.herokuapp.com/)
@@ -164,6 +165,25 @@ During creation journey I did use:
 
 ## **4.2 Manual testing**
 
+### **Sign up Page wrong user or password**
+
+![Landing page menu](images/readme_images/testing/signup_wrong_password.png)
+
+### **Login Page wrong user or password**
+
+![Login Page wrong user or password](images/readme_images/testing/login_page_wrong_login.png)
+
+### **Sign up Page email exist**
+
+![Login Page email exist](images/readme_images/testing/register_user_mail_exist.png)
+
+### **Sign up Page user exist**
+
+![Sign up Page user exist](images/readme_images/testing/register_user_exist.png)
+
+### **Sign up Page password too short**
+
+![Sign up Page password too short](images/readme_images/testing/register_password_short.png)
 
 
 [Back to Table Of Content](#tableOfContents)
@@ -172,10 +192,9 @@ During creation journey I did use:
 
 ## **4.3 Function tests**
 
-### **Login Page wrong user or password**
 
-![Landing page menu](images/readme_images/testing/login_page_wrong_login.png)
 
+[Back to Table Of Content](#tableOfContents)
 
 <a name="development"></a>
 
@@ -234,14 +253,26 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 
 ![Landing page](images/readme_images/testing/welcome_page.png)
 
+### **Sign up page**
+
+![Sign up page](templates/account/signup.html)
+
 ### **Login Page**
 
-![Landing page menu](images/readme_images/testing/login_page.png)
+![Login Page](images/readme_images/testing/login_page.png)
 
 
 ### **User not authenticated Page Menu**
 
-![Landing page menu](images/readme_images/testing/landing_page_menu.png)
+![User not authenticated Page Menu](images/readme_images/testing/landing_page_menu.png)
+
+### **User authenticated Home Page Menu**
+
+![User authenticated Home Page Menu](images/readme_images/testing/home_page_menu.png)
+
+### **User not authenticated Page Menu**
+
+![User not authenticated Page Menu](images/readme_images/testing/landing_page_menu.png)
 
 
 [See testing photos](#functionTest) for more end product photo.
