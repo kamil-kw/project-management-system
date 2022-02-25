@@ -21,10 +21,12 @@ The goal was to create a tool, which in the future can be adjusted according to 
 * [**1.1. Strategy**](#strategy)
     * [**1.1.1 Project Goals**](#projectGoals)
     * [**1.1.2 User Stories**](#userStories)
+    * [**1.1.3 KANBAN - Agile**](#kanban)
 
 * [**1.2. Structure**](#structure)
 * [**1.3. Skeleton**](#skeleton)
 * [**1.4. Color Scheme**](#colorScheme)
+* [**1.5. Data Base**](#dataBase)
 
 [**2. Features**](#features)
 
@@ -64,7 +66,7 @@ As a next step on my path of becoming a software developer from zero to hero �
 
 <a name="projectGoals"></a>
 
-##  **1.1.1 Project Goals**
+#  **1.1.1 Project Goals**
 
 A project goal was to create a set PM tool belt were project tasks can be monitored, this page have a potential to build more tools in upcoming project #5, where additional features like Gantt Chart, Critical Path, Delay Calculator, and Task Time Calculator will be added. Currently tool has abilities to store tasks against multiple projects, owners and due dates. User can select either a specific project, or choose the owner of the task.
 
@@ -73,13 +75,49 @@ The reason for this web page is to create tool which I can use as a potential PM
 
 <a name="userStories"></a>
 
-## **1.1.2 User Stories **
+## **1.1.2 User Stories - Agile**
 
 ![User Stories](images/readme_images/user_stories.png)
 
+<a name="kanban"></a>
+
+## **1.1.3 KANBAN Dashboard - Agile**
+
+![KANBAN Dashboard](images/readme_images/KANBAN.png)
+
+<a name="structure"></a>
+
 # **1.2. Structure**
 
+## **Wireframes**
 
+### **Landing page**
+
+![Landing page](images/readme_images/testing/wireframes_landing.png)
+
+### **Sign up page**
+
+![Sign up page](images/readme_images/testing/wireframes_signup.png)
+
+### **Login page**
+
+![Login page](images/readme_images/testing/wireframes_login.png)
+
+### **Task List**
+
+![Task List](images/readme_images/testing/welcome_task_list.png)
+
+### **Add Task**
+
+![Add Task](images/readme_images/testing/wireframes_add_task.png)
+
+### **Project List**
+
+![Project List](images/readme_images/testing/wireframes_project_list.png)
+
+### **Add Project**
+
+![Add Project](images/readme_images/testing/wireframes_add_project.png)
 
 <a name="skeleton"></a>
 
@@ -100,25 +138,42 @@ diagram below:
 
 <a name="features"></a>
 
+
+<a name="dataBase"></a>
+
+# **1.5. Database Design**
+
+### **Database structure**
+
+![Database Design](images/readme_images/testing/database.png)
+
+### **Security**
+
+For a security reasons a Database connection details are set up in an env.py. For production these are stored in Heroku.
+
+
+[Back to Table Of Content](#tableOfContents)
+
 # **2. Features**
 
 [Back to Table Of Content](#tableOfContents)
 
 <a name="technologies"></a>
 
-•	Responsive design
-•	Navigation Menu (Site Wide)
-•	Postgress databases to store information and user login/profile information
-•	CRUD Functionality
-•	Filter list details functionality
-•	Filter due date range
-•	Hiding filter once not in use
-•	Login functionality
-•	Logout functionality
-•	Register functionality
+* Responsive design
+* Navigation Menu (Site Wide)
+* Postgress databases to store information and user login/profile information
+* CRUD Functionality
+* Filter list details functionality
+* Filter due date range
+* Hiding filter once not in use
+* Pagination
+* Login functionality
+* Logout functionality
+* Register functionality
 
 
-Importance and Difficulty table:
+### **Importance and Difficulty table**
 
 ![Hero image](images/readme_images/importance_difficulty.png)
 
@@ -184,7 +239,20 @@ During creation journey I did use:
 
 <a name="pep"></a>
 
-## **4.1 PEP8**
+## **4.1 Validators**
+
+### **PEP8**
+
+Code pass PEP8 without a critical errors
+
+### **W3C HTML**
+
+Code pass W3C HTML without errors
+
+### **W3C CSS**
+
+Code pass W3C CSS without errors
+
 
 
 [Back to Table Of Content](#tableOfContents)
@@ -464,6 +532,11 @@ Heroku Postgres Database
 <hr>
 
 ![Edit Task](images/readme_images/testing/edit_task.png)
+
+### **Sign out**
+<hr>
+
+![Sign out](images/readme_images/testing/sign_out.png)
 
 
 
