@@ -47,6 +47,10 @@ input {
   background-color: brown;
 }
 
+.middle-container {
+  padding-bottom: 12vh;
+}
+
 .footer-font {
   font-family: 'Merienda', cursive;
   font-weight: 800;
@@ -133,6 +137,11 @@ form.search {
   height: 4vw;
 }
 
+#footer {
+  position: fixed;
+  bottom: 0px;
+}
+
 input#id_done {
   height: 3vh;
   float: left;
@@ -161,14 +170,17 @@ input#id_done {
     height: 4vh;
     text-align: -webkit-center;
   }
-  
+
 
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .action_field, form.search, summary {
-  font-size: larger;
+
+  .action_field,
+  form.search,
+  summary {
+    font-size: larger;
   }
 
   .signup-btn {
@@ -179,6 +191,10 @@ input#id_done {
   form.search {
     margin-left: 20vw;
     margin-right: 18vw;
+  }
+
+  input#id_name {
+    width: 40vw;
   }
 
 }
