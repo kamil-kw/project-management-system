@@ -129,7 +129,9 @@ During creation journey I did use:
 * [Chrome](https://www.google.com/intl/en_uk/chrome/)
     * Chrome dev tool used to debug and test code while building
 * [Github](http://github.com)
-    * For storing project code written in gitpod
+    * For storing project
+* [Gitppd]](https://gitpod.io/workspaces)
+    * Code written in gitpod workspace
 * [W3School](https://www.w3schools.com/)
     * For problem solving and code searching
 * [Stack Overflow](https://stackoverflow.com/)
@@ -143,10 +145,36 @@ During creation journey I did use:
 * [Markdown](https://en.wikipedia.org/wiki/Markdown)
     * To create project documentation
 * [Python OS](https://getbootstrap.com/)
-    * To style the site a framework addition to CSS3
+    * asgiref==3.5.0
+    * backports.zoneinfo==0.2.1
+    * cloudinary==1.28.1
+    * coverage==6.3.1
+    * dj-database-url==0.5.0
+    * dj3-cloudinary-storage==0.0.6
+    * Django==3.2
+    * django-allauth==0.48.0
+    * django-bootstrap-datepicker-plus==4.0.0
+    * django-filter==21.1
+    * gunicorn==20.1.0
+    * oauthlib==3.2.0
+    * psycopg2==2.9.3
+    * PyJWT==2.3.0
+    * python3-openid==3.2.0
+    * pytz==2021.3
+    * requests-oauthlib==1.3.1
+    * sqlparse==0.4.2
+* [Django](https://docs.djangoproject.com/en/4.0/)
+    * This project was created using the Django framework, the back-end logic and the means to run/view the Website.
 * [Bootstrap](https://docs.python.org/3/library/os.html)
-    * Used for os.environ
-
+    * To provide styles to page
+* [balsamiq Wireframes](https://balsamiq.com/wireframes/)
+    * To build wireframes
+* [Font Awesome](https://fontawesome.com/)
+    * Special Icons for links
+* [Google Fonts](https://fonts.google.com/)
+    * Google fonts are used in the project to import the Merienda font for the nav title.
+* [Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/index.php)
+    * Multi Device Website Mockup Generator was used to create the Mock up image in this README
 
 [Back to Table Of Content](#tableOfContents)
 
@@ -280,8 +308,19 @@ During creation journey I did use:
 
 ## **4.3 Function tests**
 
+Due to time constrains not the full automatic test wasen't caompleted
 
+### **Automatic Test**
+<hr>
 
+### **First Automatic Test**
+
+![Automatic Test](images/readme_images/testing/first_test.png)
+
+### **Second Automatic Test**
+* Due to time limits additional test are not implemented 
+
+![Automatic Test](images/readme_images/testing/test_automatic.png)
 
 
 [Back to Table Of Content](#tableOfContents)
@@ -293,17 +332,23 @@ During creation journey I did use:
 # **5. Development Cycle**
 
 
-Page was building based on diagram and user stories. The first days of this project I was focused with installing packets and building the connection with a database & cloudinary. Once build the connection with database I did deploy project to Heroku to avoid potential error with deployed version.
+Page was building based on diagram, user stories, and wireframes. The first days of this project I was focused with installing packets and building the connection with a database & cloudinary. Once build the connection with database I did deploy project to Heroku to avoid potential error with deployed version.
 
 CRUD functionality over task list was a next phase of this implementations, to ensure user is capable to manipulate data by adding, updating, deleting and marking as completed to have a full control over a data.
+
+Adding Automatic test for CRUD functionality.
 
 Adding Calendar picker to due date field to avoid potential issues with typing date in the different way as is expected by form as well as improve UX by delivering visual ability to locate chosen date on the calendar it self.
 
 As per Agile approach the next features appear during next iteration cycle where an issue with building a separate way to store Projects in form of the list to have ability to standardize projects naming convention and keep control over a data and future task creation.
+
 Tu ensure the project data is also coming under a CRUD functionality I decided to build it in the class view model, which give me an opportunity to learn this approach in real situation.
 
-Filter option was implemented to reduce a displayed data and to give a better end user experience.
-To avoid overwhelming number of displayed data the pagination was implemented.
+Filter option was implemented to reduce a displayed data and to give a better end user experience. To avoid overwhelming number of displayed data the pagination was implemented.
+
+Final bug fix run, where issues like registration error, queryset conflicts were addressed.
+
+Tha last stage of the process was styling page in CSS and creating ReadMe file.
 
 
 
@@ -312,6 +357,13 @@ To avoid overwhelming number of displayed data the pagination was implemented.
 <a name="deployment"></a>
 
 # **6. Deployment**
+
+Development Environment
+
+1. Create requirements.txt pip3 freeze --local > requirements.txt
+2. Create Procfile.
+3. Commit and push changes to Github.
+4. Move to Heroku part of deployment.
 
 To deploy my final project to the cloud I used Heroku. To do this I had to:
 
@@ -330,6 +382,20 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 13. Make sure Heroku/Python is at the top of the list, followed by Heroku/Nodejs
 14. Navigate to the deploy tab
 15. Scroll down to Manual Deploy and select deploy branch.
+
+Heroku Postgres Database
+
+1. Go to the resources tab in Heroku.
+2. Select Heroku Postgres from Add-ons search bar
+3. Choose the Hobby Dev-Free plan.
+4. Click submit order form.
+5. Go back to Gitpod bash terminal and install
+    * pip3 install dj_databse_url
+    * pip3 install psycopg2-binary 
+6. Seve in the requirements file by: 
+    * pip3 freeze > requirements.txt
+
+
 
 [Deployed version](TBA)
 
