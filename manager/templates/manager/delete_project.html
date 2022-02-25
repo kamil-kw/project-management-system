@@ -2,12 +2,17 @@
 
 
 {% block content %}
+<div class="row action_field">
+    <div class="col center">
 <h2>Delete task form list:</h2>
 <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
 
     <p>Are you sure you want to delete "{{ object }}"?</p>
 
-    <button type="submit" value="Confirm">
+
+    <button class="btn btn-danger" type="submit">Confirm</button>
 </form>
+</div>
+</div>
 {% endblock content %}

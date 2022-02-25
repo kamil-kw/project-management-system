@@ -166,6 +166,7 @@ During creation journey I did use:
 ## **4.2 Manual testing**
 
 ### **Sign Up test**
+<hr>
 
 ### **Sign up Page wrong user or password**
 
@@ -184,10 +185,13 @@ During creation journey I did use:
 ![Sign up Page password too short](images/readme_images/testing/register_password_short.png)
 
 ### **Login test**
+<hr>
 
 ### **Login Page wrong user or password**
 
 ![Login Page wrong user or password](images/readme_images/testing/login_page_wrong_login.png)
+
+
 
 [Back to Table Of Content](#tableOfContents)
 
@@ -200,6 +204,8 @@ During creation journey I did use:
 [Back to Table Of Content](#tableOfContents)
 
 <a name="development"></a>
+
+
 
 # **5. Development Cycle**
 
@@ -251,36 +257,58 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 # **7. End Product**
 
 ## **End Product screens**
+<hr>
 
 ### **Landing Page**
+<hr>
 
 ![Landing page](images/readme_images/testing/welcome_page.png)
 
 ### **Sign up page**
+<hr>
 
 ![Sign up page](images/readme_images/testing/signup.png)
 
 ### **Login Page**
+<hr>
 
 ![Login Page](images/readme_images/testing/login_page.png)
 
 
 ### **User not authenticated Page Menu**
+<hr>
 
 ![User not authenticated Page Menu](images/readme_images/testing/landing_page_menu.png)
 
 ### **User authenticated Home Page Menu**
+<hr>
 
 ![User authenticated Home Page Menu](images/readme_images/testing/home_page_menu.png)
 
-
 ### **Home Page**
+<hr>
 
 ![Home Page](images/readme_images/testing/home_page.png)
 
+### **Project List**
+<hr>
+
+![Project List](images/readme_images/testing/project_list.png)
+
 ### **Add Project**
+<hr>
 
 ![Add Project](images/readme_images/testing/add_project.png)
+
+### **Update Project**
+<hr>
+
+![Update Project](images/readme_images/testing/update_project.png)
+
+### **Delete Project**
+<hr>
+
+![Delete Project](images/readme_images/testing/delete_project.png)
 
 [See testing photos](#functionTest) for more end product photo.
 
@@ -296,9 +324,10 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 ## **8.1 Fixed bugs**
 
 
-During development I did face multiple bugs: 
+During development I did face multiple bugs:
 
-* 301 Redirect Error
+### **301 Redirect Error**
+<hr>
 
 Error
 
@@ -309,7 +338,8 @@ Fix
 ![301 redirect Error](images/readme_images/bugs/E1_solution_True.png)
 
    
-* Issue with page rendering (Ger)
+### **Issue with page rendering**
+<hr>
     * Page wasent rendering due to lack of implementing url by using jinja template
 
 Fix
@@ -329,23 +359,28 @@ Updated the other templates accordingly
 
 ![301 redirect Error](images/readme_images/bugs/E4_template.png)
 
-* Templates DIR typo
-    * used DRI insted of DIR
+### **Templates DIR typo**
+<hr>
+
+* Typed DRI insted of DIR
 
 Fix
 
 ![301 redirect Error](images/readme_images/bugs/E5_DIR_typo.png)
 
 * Display CSS setting in the Heroku deployed version (Alan, John)
-    * Issue related with not using a correct folders structure, link to the static files was incorectly writen
+<hr>
 
-* Link to style sheet shoul be in the < head >
+* Issue related with not using a correct folders structure, link to the static files was incorectly writen
+
+* Link to style sheet should be in the < head >
 
 Fix
 
 ![301 redirect Error](images/readme_images/bugs/E6_link_to_css.png)
 
-* Setting.py, setting debug to:
+### **Setting.py, setting debug to:**
+<hr>
 
 SECURITY WARNING: don't run with debug turned on in production!
 
@@ -364,8 +399,10 @@ urlpatterns = [
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
-* Conflict between filter and paginations 
-    * caused by using same queryset – fixed by separating queries
+### **Conflict between filter and paginations**
+<hr>
+
+* Caused by using same queryset – fixed by separating queries
 
 Fix
 
@@ -374,13 +411,10 @@ Fix
 
 <a name="remainBugs"></a>
    
-Delay with updating project list - no solutions provided
-
 ## **8.2 Remaining Bugs**
 
-No bugs remaining
+### **Delay with updating project list - no solutions provided**
 
-All known bugs were corrected before deployment
 
 [Back to Table Of Content](#tableOfContents)
 
