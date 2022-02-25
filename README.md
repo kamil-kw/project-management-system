@@ -230,7 +230,14 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 
 ![Landing page](images/readme_images/testing/welcome_page.png)
 
-### **Landing Page Menu**
+### **Login Page**
+
+![Landing page menu](images/readme_images/testing/login_page.png)
+
+
+
+
+### **User not authenticated Page Menu**
 
 ![Landing page menu](images/readme_images/testing/landing_page_menu.png)
 
