@@ -123,7 +123,7 @@ The reason for this web page is to create tool which I can use as a potential PM
 
 # **1.3. Skeleton**
 
-diagram below:
+### **Diagram**
 
 ![flow](images/readme_images/pms_flow.png)
 
@@ -132,6 +132,10 @@ diagram below:
 <a name="colorScheme"></a>
 
 # **1.4. Color Scheme**
+
+* Color of body was: rgba(33, 37, 41, 1) the bs-gray-900 bootsrap pallet
+* Image colors: mix of rgba(32, 149, 175, 1) rgba(41, 75, 113, 1) and rgba(30, 150, 113, 1)
+* Font color: aliceblue
 
 
 [Back to Table Of Content](#tableOfContents)
@@ -653,11 +657,13 @@ Fix
 # **9. Credits**
 
 * Heroku deployment instructions from Code Institute
-* Hello Django and Djngo blog from code institute
+* Hello Django and Django blog from code institute
 * Django Blog by Codemy
-* Stack overflow to support with debugig
+* Stack overflow to support with debuging
 * CI Tutor Support for Help with
    * Issue with page rendering (Ger)
    * Extending base.html template to allauth html files
    * Display CSS setting in the Heroku deployed version (Alan, John)
 * GitHub Python Template [Code Institute](https://codeinstitute.net/)
+
+* Coding Buddy @Matt_5P for mental support and help with issus during process
