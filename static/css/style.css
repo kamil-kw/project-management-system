@@ -60,11 +60,17 @@ footer {
   width: 100vw;
 }
 
+h1,
 h2,
 h3,
 p,
+li,
 details {
   color: aliceblue;
+}
+
+li {
+  list-style-type: none;
 }
 
 p {
