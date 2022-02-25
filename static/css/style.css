@@ -110,6 +110,9 @@ div>table {
   font-size: small;
 }
 
+.bottom-button {
+  margin-bottom: 10vw;
+}
 
 .signup-btn {
   margin-top: 18vw;
@@ -126,6 +129,16 @@ form.search {
   margin-right: 18vw;
 }
 
+#done {
+  height: 4vw;
+}
+
+input#id_done {
+  height: 3vh;
+  float: left;
+  margin-top: 4px;
+  width: auto;
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media only screen and (min-width: 576px) {
@@ -142,6 +155,11 @@ form.search {
   input {
     float: right;
     width: 30vw;
+  }
+
+  p {
+    height: 4vh;
+    text-align: -webkit-center;
   }
   
 

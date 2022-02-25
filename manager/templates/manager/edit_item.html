@@ -2,13 +2,17 @@
 
 
 {% block content %}
-<div class="row action_field">
+<div class="row action_field center">
     <div class="col">
         <h2>Edit task form list:</h2>
         <form method="POST" enctype="multipart/form-data">
 
             {% csrf_token %}
+            <div>
             {{ form.as_p }}
+            </div>
+            <br>
+            <hr>
             <br>
             <div class="center">
                 <button class="btn btn-primary" type="submit">Edit Item</button>

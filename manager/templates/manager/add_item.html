@@ -8,7 +8,10 @@
         <form class="add_task" method="POST" enctype="multipart/form-data" action="{% url 'add' %}">
 
             {% csrf_token %}
+            <div>
             {{ form.as_p }}
+            </div>
+            <br>
             <div>
                 <p>
                     <button class="btn btn-primary" type="submit">Add Item</button>
