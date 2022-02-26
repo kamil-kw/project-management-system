@@ -55,7 +55,7 @@ The goal was to create a tool, which in the future can be adjusted according to 
 
 # **1. UX**
 
-As a next step on my path of becoming a software developer from zero to hero 😊, I'm presenting a Project Manager Tool. As mentioned in my last projects my ultimate goal is to change my career path and become a full-time developer. Here I will be showing my new acquired skill, which is Django and DataBase. As part of my portfolio collection, which can be shown to my potential future employers, and potentially be used by myself. I have decided to build a product that can support day to day workload of Project Managers or SCRUM masters. The product is simple to use and intuitive, the navigation around the page is clear and gives user ability to search and filter through things like date or status. Product can be adjusted in the future for specific customer needs, as well as certain features can be added if business needs it. The current tool includes elements as project name, task, due date and owner. Tool can hold multiple projects, meaning project manager or SCRUM master can have an overview of all actions open against each project they are working on. By having all in one space, this optimizes time and effort for tasks management.  
+As a next step on my path of becoming a software developer from zero to hero 😊, I'm presenting a Project Manager Tool. As mentioned in my last projects my ultimate goal is to change my career path and become a full-time developer. Here I will be showing my new acquired skills, which are Django and DataBase. As part of my portfolio collection, which can be shown to my potential future employers, and potentially to be used by myself. I have decided to build a product that can support the day to day workload of Project Managers or SCRUM masters. The product is simple to use and intuitive, the navigation around the page is clear and gives users the ability to search and filter through things like date or status. Product can be adjusted in the future for specific customer needs, as well as certain features can be added if business needs it. The current tool includes elements as project name, task, due date and owner. Tool can hold multiple projects, meaning the project manager or SCRUM master can have an overview of all actions open against each project they are working on. By having all in one space, this optimizes time and effort for task management.
 
 
 [Back to Table Of Content](#tableOfContents)
@@ -68,9 +68,9 @@ As a next step on my path of becoming a software developer from zero to hero �
 
 #  **1.1.1 Project Goals**
 
-A project goal was to create a set PM tool belt were project tasks can be monitored, this page have a potential to build more tools in upcoming project #5, where additional features like Gantt Chart, Critical Path, Delay Calculator, and Task Time Calculator will be added. Currently tool has abilities to store tasks against multiple projects, owners and due dates. User can select either a specific project, or choose the owner of the task.
-
-The reason for this web page is to create tool which I can use as a potential PM SCRUM master in the future also to create product which can be a sellable. Therefore, in my thought process, I aimed to create a good basis in project #4 and expand on that in my next project #5. 
+A project goal was to create a set PM tool belt where project tasks can be monitored, this page has a potential to build more tools in upcoming project #5, where additional features like Gantt Chart, Critical Path, Delay Calculator, and Task Time Calculator could be added. Currently the tool has abilities to store tasks against multiple projects, owners and due dates. Users can select either a specific project, or choose the owner of the task.
+ 
+The reason for this web page is to create a tool which I can use as a potential PM SCRUM master in the future also to create a product which can be sellable. Therefore, in my thought process, I aimed to create a good basis in project #4 and expand on that in the future
 
 
 <a name="userStories"></a>
@@ -297,6 +297,7 @@ Code pass W3C CSS without errors
 ![Sign up Page password too short](images/readme_images/testing/register_password_short.png)
 
 [Back to Table Of Content](#tableOfContents)
+
 ### **Login test**
 <hr>
 
@@ -358,7 +359,7 @@ Code pass W3C CSS without errors
 
 ### **Owner Filter**
 
-![Date Range Filter](images/readme_images/testing/filter_owner.png)
+![Owner Filter](images/readme_images/testing/filter_owner.png)
 
 [Back to Table Of Content](#tableOfContents)
 ### **Link opener**
@@ -392,19 +393,19 @@ Code pass W3C CSS without errors
 
 ## **4.3 Function tests**
 
-Due to time constrains not the full automatic test wasen't caompleted
+Due to time constraints the full automatic test wasn't completed
 
 ### **Automatic Test**
 <hr>
 
 ### **First Automatic Test**
 
-![Automatic Test](images/readme_images/testing/first_test.png)
+![First Automatic Test](images/readme_images/testing/first_test.png)
 
 ### **Second Automatic Test**
 * Due to time limits additional test are not implemented 
 
-![Automatic Test](images/readme_images/testing/test_automatic.png)
+![Second Automatic Test](images/readme_images/testing/test_automatic.png)
 
 
 [Back to Table Of Content](#tableOfContents)
@@ -416,24 +417,23 @@ Due to time constrains not the full automatic test wasen't caompleted
 # **5. Development Cycle**
 
 
-Page was building based on diagram, user stories, and wireframes. The first days of this project I was focused with installing packets and building the connection with a database & cloudinary. Once build the connection with database I did deploy project to Heroku to avoid potential error with deployed version.
-
-CRUD functionality over task list was a next phase of this implementations, to ensure user is capable to manipulate data by adding, updating, deleting and marking as completed to have a full control over a data.
-
+Page was built based on diagrams, user stories, and wireframes. The first days of this project I was focused on installing packets and building the connection with a database & cloudinary. Once I built the connection with the database I did deploy the project to Heroku to avoid potential errors with the deployed version.
+ 
+CRUD functionality over task list was a next phase of this implementation, to ensure the user is capable of manipulating data by adding, updating, deleting and marking as completed to have full control over the information.
+ 
 Adding Automatic test for CRUD functionality.
-
-Adding Calendar picker to due date field to avoid potential issues with typing date in the different way as is expected by form as well as improve UX by delivering visual ability to locate chosen date on the calendar it self.
-
-As per Agile approach the next features appear during next iteration cycle where an issue with building a separate way to store Projects in form of the list to have ability to standardize projects naming convention and keep control over a data and future task creation.
-
-Tu ensure the project data is also coming under a CRUD functionality I decided to build it in the class view model, which give me an opportunity to learn this approach in real situation.
-
-Filter option was implemented to reduce a displayed data and to give a better end user experience. To avoid overwhelming number of displayed data the pagination was implemented.
-
+ 
+Adding Calendar picker to due date field to avoid potential issues with typing date in the different way as is expected by form, as well as improve UX by delivering visual ability to locate chosen date on the calendar itself.
+ 
+As per Agile approach the next feature appearing during the next iteration cycle was an issue with building a separate way to store Projects in the form of the list. This enabled users to have the ability to standardize project naming convention and keep control over the data and future task creation.
+ 
+To ensure the project data has CRUD functionality, I decided to build it in the class view model, which gave me an opportunity to learn this approach in a real situation.
+ 
+Filter option was implemented to reduce displayed data and to give a better end user experience. To avoid an overwhelming number of displayed data the pagination was implemented.
+ 
 Final bug fix run, where issues like registration error, queryset conflicts were addressed.
-
+ 
 Tha last stage of the process was styling page in CSS and creating ReadMe file.
-
 
 
 [Back to Table Of Content](#tableOfContents)
@@ -454,7 +454,7 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 1. Push the latest code to GitHub.
 2. Go to Heroku
 3. Select new in the top right corner.
-4. Create new app.
+4. Create a new app.
 5. Enter the app name and select Europe as the region.
 6. Connect to GitHub.
 7. Search for repo-name.
@@ -462,10 +462,9 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 9. Select the settings tab.
 10. Add buildpack
 11. Select Python, then save changes.
-12. Select Nodejs, then save changes.
-13. Make sure Heroku/Python is at the top of the list, followed by Heroku/Nodejs
-14. Navigate to the deploy tab
-15. Scroll down to Manual Deploy and select deploy branch.
+12. Make sure Heroku/Python is at the top of the list, followed by Heroku/Nodejs
+13. Navigate to the deploy tab
+14. Scroll down to Manual Deploy and select deploy branch.
 
 Heroku Postgres Database
 
@@ -586,7 +585,7 @@ Fix
    
 ### **Issue with page rendering**
 <hr>
-    * Page wasent rendering due to lack of implementing url by using jinja template
+    * Page wasn't rendering due to lack of implementing url by using jinja template
 
 Fix
 
@@ -617,7 +616,7 @@ Fix
 * Display CSS setting in the Heroku deployed version (Alan, John)
 <hr>
 
-* Issue related with not using a correct folders structure, link to the static files was incorectly writen
+* Issue related with not using a correct folders structure, link to the static files was incorectly written
 
 * Link to style sheet should be in the < head >
 
@@ -659,7 +658,7 @@ Fix
    
 ## **8.2 Remaining Bugs**
 
-### **Delay with updating project list - no solutions provided**
+### **Delay with updating project list, waiting time approx. 5 min - the solution was discovered few hours before the project deadline, however due to complexity and potential impact to the overall project deadline, decision was made to do not intoroduce the fix.**
 
 
 [Back to Table Of Content](#tableOfContents)
@@ -670,7 +669,7 @@ Fix
 
 * Heroku deployment instructions from Code Institute
 * Hello Django and Django blog from code institute
-* Django Blog by Codemy
+* [Django Blog by Codemy](https://www.youtube.com/playlist?list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy)
 * Stack overflow to support with debuging
 * CI Tutor Support for Help with
    * Issue with page rendering (Ger)
