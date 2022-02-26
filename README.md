@@ -124,8 +124,20 @@ The reason for this web page is to create tool which I can use as a potential PM
 # **1.3. Skeleton**
 
 ### **Diagram**
+<hr>
 
-![flow](images/readme_images/pms_flow.png)
+### **Diagram signup-login-logout**
+
+![Diagram signup-login-logout](images/readme_images/flow_login_logout.png)
+
+### **Diagram CRUD**
+
+![Diagram CRUD](images/readme_images/Flow_CRUD.png)
+
+### **Diagram filter**
+
+![Diagram filter](images/readme_images/flow_filter.png)
+
 
 [Back to Table Of Content](#tableOfContents)
 
